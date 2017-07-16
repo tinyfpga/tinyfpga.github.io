@@ -24,4 +24,17 @@ The A-Series boards use the [Lattice Diamond](http://www.latticesemi.com/lattice
 #### B-Series
 The B-Series boards use the [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) design software for synthesizing digital designs into FPGA bitstreams.  It can also be downloaded for free from [Lattice Semiconductor's website](http://www.latticesemi.com/iCEcube2).  Just like Lattice Diamond, iCEcube2 requires a free license file to be downloaded so be sure to follow their directions carefully.
 
-There is also an opensource alternative available for the B-Series boards called [Project IceStorm](http://www.clifford.at/icestorm/) however this has not yet been tested with the TinyFPGA boards.
+There is an opensource alternative available for the B-Series boards called [Project IceStorm](http://www.clifford.at/icestorm/) however this has not yet been tested with the TinyFPGA boards.
+
+To jumpstart development a simple [iCEcube2 project template](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/template) is provided with a top-level verilog file that represents the pins on the B-Series boards.  This project contains a timing constraint for the 16MHz clock and pin constraints for each of the pins.  You can download the template as part of the [TinyFPGA B-Series Repository ZIP](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip).
+
+### FPGA Programmer
+#### A-Series
+The A-Series boards are programmed via JTAG.  You will need [JTAG Programmer Hardware](https://www.ebay.com/sch/i.html?_productid=533163279) and the [Lattice Programmer Software](http://www.latticesemi.com/programmer).  In the future there may be a dedicated programmer device for the A-Series boards.
+
+#### B-Series
+The B-Series boards have a built-in USB bootloader.  To program a bitstream use the [TinyFPGA B-Series Programmer](TinyFPGA_Programmer_1.0.exe) and select the serial port of the device and bitstream file.  If you are using Linux or OSX you can run the programmer application as a Python script.  It is available in the [TinyFPGA B-Series GitHub Repo](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/programmer). You can download the programmer python scripts as part of the [TinyFPGA B-Series Repository ZIP](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip).
+
+![](b-programmer.png)
+
+
