@@ -5,4 +5,5 @@ defaults:
     scope:
       path: ""
     values:
-      site.title: "TinyFPGA.com"
+      site:
+        title: "TinyFPGA.com"
