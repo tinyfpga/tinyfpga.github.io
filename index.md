@@ -15,7 +15,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | Distributed RAM       |   2 KBits   |   10 KBit   |             |             |
 | Block RAM             |             |   64 KBit   |   80 KBit   |   128 KBit  |
 | User Flash            |             |   64 KBit   |  2000 KBit  |  2000 KBit  |
-| Phase Lock Loops      |      1      |      1      |      1      |      1      |
+| Phase Lock Loops      |             |      1      |      1      |      1      |
 | User IO Pins          |     21      |     21      |     23      |     23      |
 | Price                 |[$12.00](http://store.tinyfpga.com/product/tinyfpga-a1)|[$18.00](http://store.tinyfpga.com/product/tinyfpga-a2)|[$30.00](http://store.tinyfpga.com/product/tinyfpga-b1)|[$36.00](http://store.tinyfpga.com/product/tinyfpga-b2)|   
 
