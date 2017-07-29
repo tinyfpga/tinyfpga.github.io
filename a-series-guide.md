@@ -27,8 +27,8 @@ Once you have all of your hardware and software ready you can get started develo
 
 #### 1. Copy the template project from the [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip)
 
-Copy either the `[template_a1](https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a1)` or `[template_a2](https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a2)` directories to a new directory and rename it `blink_project`.
+Copy either the [`template_a1`](https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a1) or [`template_a2`](https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a2) directories to a new directory and rename it `blink_project`.
 
 #### 2. Open your newly copied template project
 
-
+Open the Lattice Diamond application.  From the `File` menu select `Open` and `Project...`.  In the newly opened file chooser, navigate to the `blink_project` directory you just created and select the `template_a1.ldf` or `template_a2.ldf` project file.
