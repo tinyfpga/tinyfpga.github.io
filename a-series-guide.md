@@ -32,3 +32,22 @@ Copy either the [`template_a1`](https://github.com/tinyfpga/TinyFPGA-A-Series/tr
 #### 2. Open your newly copied template project
 
 Open the Lattice Diamond application.  From the `File` menu select `Open` and `Project...`.  In the newly opened file chooser, navigate to the `blink_project` directory you just created and select the `template_a1.ldf` or `template_a2.ldf` project file.
+
+#### 3. Implement your logic
+
+Now that we have opened our new project we can write some verilog code.  Make sure the `File List` tab is open on the left-hand side view and open up the `TinyFPGA_A1.v` or `TinyFPGA_A2.v` verilog file.
+
+This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA A-Series boards.  Right now this top-level is assigning all the pins to `1'bz`.  This means the pins will be left floating or disconnected.  Let's implement some logic to blink a few LEDs.
+
+Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an internal oscillator we can use.
+
+```verilog
+  wire clk;
+  
+  OSCH #(
+    .NOM_FREQ("2.08")
+  ) internal_oscillator_inst (
+    .STDBY(1'b0), 
+    .OSC(clk)
+  ); 
+```
