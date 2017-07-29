@@ -39,7 +39,7 @@ Now that we have opened our new project we can write some verilog code.  Make su
 
 This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA A-Series boards.  Right now this top-level is assigning all the pins to `1'bz`.  This means the pins will be left floating or disconnected.  Let's implement some logic to blink a few LEDs.
 
-Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an internal oscillator we can use.
+Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an internal oscillator we can use.  To use the internal oscillator we need to instantiate the `OSCH` module and tell it what frequency we want.
 
 ```verilog
   wire clk;
@@ -51,3 +51,33 @@ Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an in
     .OSC(clk)
   ); 
 ```
+
+Since we are just blinking some LEDs we don't need a high frequency so we can use the lowest internal frequency available which is 2.08 MHz.  For more details on the clock resources available in the MachXO2 FPGAs please see the [MachXO2 sysCLOCK PLL Design and Usage Guide](http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/MO/MachXO2sysCLOCKPLLDesignandUsageGuide.pdf?document_id=39080).
+
+_NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this step._
+
+If you're Now that we have a clock we can implement some sequential logic.  We will create a simple counter to time the blinking of our LEDs.
+
+```verilog
+  reg [23:0] led_timer;
+  
+  always @(posedge clk) begin
+    led_timer <= led_timer + 1; 
+  end
+```
+
+The timer will increment by 1 every clock period.  We can use the upper bits to blink our LEDs but we need to assign them to external pins.  Edit the corresponding `assign` statements so they match the code below.
+
+```verilog
+  assign pin9_jtgnb = led_timer[23];
+  assign pin10_sda = led_timer[22];
+  assign pin11_scl = led_timer[21];
+```
+
+At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the `CTRL + SHIFT + S` keyboard shortcut.  
+
+#### 4. Generate JEDEC programming file
+
+Select the `Process` tab on the left hand side view.  This will bring up a tree of tasks that need to be executed in order to generate the JEDEC programming file.  At the very bottom of the tree you should see an entry labeled `JEDEC File`.  Double-click that entry and the programming file should be created.  When it is done it will have a green checkmark next to it.
+
+#### 5. P
