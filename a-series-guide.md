@@ -118,7 +118,15 @@ If you followed this tutorial exactly you should see the three LEDs counting in 
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
-<video width="854" height="640" autoplay loop>
-  <source src="tinyfpga-a-blinky.mov" type="video/mov" />
-  Your browser does not support the video tag.  No worries, it was just some blinky LEDs on a breadboard.
-</video>
+### Extra Resources
+* [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series)
+* Generic FPGA and Verilog Tutorials
+  * [http://www.fpga4fun.com/](http://www.fpga4fun.com/)
+  * [Digital Logic Tutorial](http://www.asic-world.com/digital/tutorial.html)
+  * [Verilog Tutorial](http://www.asic-world.com/verilog/veritut.html)
+* [Lattice MachXO2 Page](http://www.latticesemi.com/Products/FPGAandCPLD/MachXO2.aspx#_3D24D0EEB97F430890D7AF24D20DF79A)
+  * [MachXO2 Family Data Sheet](http://www.latticesemi.com/view_document?document_id=38834)
+  * [MachXO2 sysIO Usage Guide](http://www.latticesemi.com/view_document?document_id=39083)
+  * [MachXO2 sysCLOCK PLL Design and Usage Guide](http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/MO/MachXO2sysCLOCKPLLDesignandUsageGuide.pdf?document_id=39080)
+  * [Memory Usage Guide for MachXO2 Devices](http://www.latticesemi.com/view_document?document_id=39082)
+  * [Implementing High-Speed Interfaces with MachXO2 Devices](http://www.latticesemi.com/view_document?document_id=39084)
