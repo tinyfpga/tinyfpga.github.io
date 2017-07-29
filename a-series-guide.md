@@ -82,7 +82,7 @@ Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an in
 
 Since we are just blinking some LEDs we don't need a high frequency so we can use the lowest internal frequency available which is 2.08 MHz.  For more details on the clock resources available in the MachXO2 FPGAs please see the [MachXO2 sysCLOCK PLL Design and Usage Guide](http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/MO/MachXO2sysCLOCKPLLDesignandUsageGuide.pdf?document_id=39080).
 
-_NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this step._
+_NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this tutorial._
 
 Now that we have a clock we can implement some sequential logic.  We will create a simple counter to time the blinking of our LEDs.
 
@@ -128,7 +128,7 @@ If you followed this tutorial exactly you should see the three LEDs counting in 
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
-
+![](tinyfpga-a-blinky.jpg)
 
 ### Extra Resources
 * [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series)
