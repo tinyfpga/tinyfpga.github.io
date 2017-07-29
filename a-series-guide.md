@@ -29,17 +29,25 @@ Once you have all of your hardware and software ready you can get started develo
 
 This tutorial will use the TinyFPGA board in a breadboard.  If you want to follow along you will need to solder pins to the board for it to drive the LEDs and to provide a connection for the JTAG programmer.
 
+![TinyFPGA A1 next to pins](tinyfpga-a-no-pins.jpg)
+
 The JTAG pins are on the board twice.  There is a header at the bottom of the board where the pins can be soldered on facing up.  This is most convenient if you want to connect your JTAG programmer directly to the board.  The JTAG pins are also on the right side of the board.  This is useful if you are taking advantage of the `JTAGENB` feature and want to use the JTAG pins for IO.  They are also useful if you want to add the TinyFPGA board to an existing JTAG chain in your project.
+
+![TinyFPGA A1 with pins](tinyfpga-a-with-pins.jpg)
 
 #### 2. Build LED blinker circuit
 
 Now that your board has pins on it it can be inserted into a solderless breadboard.  In my breadboard I am using a [3.3 volt regulator](http://store.tinyfpga.com/product/a-series-3-3-volt-regulator-ld1117v33) to convert a 5 volt power source.  I connected LEDs to pins 9, 10, and 11 with 220 ohm resistors in series.
+
+![TinyFPGA blinker circuit](tinyfpga-a-tutorial-circuit.JPG)
 
 #### 3. Connect JTAG programmer
 
 I had bought the [official Lattice Programming Cable](http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkeyHW-USBN-2B) for too much money.  I think the [generic lattice programming cables on eBay]((https://www.ebay.com/sch/i.html?_nkw=lattice+fpga+jtag)) are more than good enough.  They use the same FTDI chip.  The colors in my setup might not match the colors on your cable.  Pay attention to the JTAG names on the FPGA board and connect them to the correct wires on your programming cable.  
 
 In my circuit I'm using the `5V Out` from the programming cable to drive the 3.3 volt regulator.  Make sure you connect the `VCC` wire from the programmer to 3.3 volts on your board.  That's the voltage level the programmer will use when communicating with the FPGA. 
+
+![TinyFPGA blinker circuit with JTAG programmer](tinyfpga-a-tutorial-programmer.JPG)
 
 #### 4. Copy the template project from the [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip)
 
@@ -109,3 +117,8 @@ Click on the program button to program the design onto the FPGA.
 If you followed this tutorial exactly you should see the three LEDs counting in binary.  One will stay on for about a second, then off for a second.  The next will be on for two seconds and off for two seconds.  The last will be on for four seconds and off for four seconds.
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
+
+<video width="854" height="640" autoplay loop>
+  <source src="tinyfpga-a-blinky.mov" type="video/mov" />
+  Your browser does not support the video tag.  No worries, it was just some blinky LEDs on a breadboard.
+</video>
