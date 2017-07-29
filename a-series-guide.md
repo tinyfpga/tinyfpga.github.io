@@ -57,9 +57,13 @@ Copy either the [`template_a1`](https://github.com/tinyfpga/TinyFPGA-A-Series/tr
 
 Open the Lattice Diamond application.  From the `File` menu select `Open` and `Project...`.  In the newly opened file chooser, navigate to the `blink_project` directory you just created and select the `template_a1.ldf` or `template_a2.ldf` project file.
 
+![](lattice-diamond-select-project.png)
+
 #### 6. Implement your logic
 
 Now that we have opened our new project we can write some verilog code.  Make sure the `File List` tab is open on the left-hand side view and open up the `TinyFPGA_A1.v` or `TinyFPGA_A2.v` verilog file.
+
+![](lattice-diamond-a2-top-level.png)
 
 This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA A-Series boards.  Right now this top-level is assigning all the pins to `1'bz`.  This means the pins will be left floating or disconnected.  Let's implement some logic to blink a few LEDs.
 
@@ -104,19 +108,27 @@ At this point you should save all your changes by clicking the floppy disk icon 
 
 Select the `Process` tab on the left hand side view.  This will bring up a tree of tasks that need to be executed in order to generate the JEDEC programming file.  At the very bottom of the tree you should see an entry labeled `JEDEC File`.  Double-click that entry and the programming file should be created.  When it is done it will have a green checkmark next to it.
 
+![](lattice-diamond-a2-project-view.png)
+
 #### 8. Program the FPGA board
 
 From the `Tools` menu select `Programmer`.  
 
 In the `Programmer: Getting Started` dialog make sure the `Create a new project from a JTAG scan` option is selected as well as the `Import file to current implementation` checkbox.
 
+![](lattice-programmer-getting-started.png)
+
 Click on the program button to program the design onto the FPGA.
+
+![](lattice-diamond-program-button.png)
 
 #### 9. Verify the design works on the board as intended
 
 If you followed this tutorial exactly you should see the three LEDs counting in binary.  One will stay on for about a second, then off for a second.  The next will be on for two seconds and off for two seconds.  The last will be on for four seconds and off for four seconds.
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
+
+
 
 ### Extra Resources
 * [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series)
