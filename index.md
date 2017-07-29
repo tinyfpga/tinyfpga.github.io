@@ -19,6 +19,13 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | User IO Pins          |     21      |     21      |     23      |     23      |
 | Price                 |[$12.00](https://www.tindie.com/products/tinyfpga/tinyfpga-a1/)|[$18.00](https://www.tindie.com/products/tinyfpga/tinyfpga-a2/)|Coming Soon|Coming Soon|   
 
+## User Guides
+The A- and B-Series boards use different FPGA families and their toolchains are different.  See the below guides to learn how to get started.
+
+### [A-Series Guide](a-series-guide.html)
+
+### B-Series Guide Coming Soon
+
 ## Digital Design Tools
 ### A-Series
 The A-Series boards use the [Lattice Diamond](http://www.latticesemi.com/latticediamond) design software for synthesizing digital designs into FPGA bitstreams.  It can be downloaded for free from [Lattice Semiconductor's website](http://www.latticesemi.com/latticediamond).  Follow their instructions carefully to get a free license file.
