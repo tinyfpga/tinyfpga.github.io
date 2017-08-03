@@ -19,6 +19,8 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | User IO Pins          |     21      |     21      |     23      |     23      |
 | Price                 |[$12.00](http://store.tinyfpga.com/product/tinyfpga-a1)|[$18.00](http://store.tinyfpga.com/product/tinyfpga-a2)|Coming Soon|Coming Soon|   
 
+Buy now from the [TinyFPGA Store](store.tinyfpga.com) or from [Tindie](https://www.tindie.com/stores/tinyfpga/).
+
 ## User Guides
 The A- and B-Series boards use different FPGA families and their toolchains are different.  See the below guides to learn how to get started.
 
