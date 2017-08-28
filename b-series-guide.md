@@ -17,7 +17,8 @@ You will need to install the latest development environment and other support to
 
 1. Download and install [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2).  It is available for both Windows and Linux.
 2. [Request a free license file](http://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/DiamondFree.aspx) in order to use the [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) software.
-3. The TinyFPGA B-Series GitHub Repository has Lattice iCEcube2 template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the iCE40 FPGA chip.  You could [download the latest files directly in a zip file](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip) or [clone the repo using git](https://github.com/tinyfpga/TinyFPGA-B-Series.git).
+3. Download and install the latest [TinyFPGA Programmer](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases) release.  This application is written in Python but has a Windows installer.  If you have Python already installed on Windows, make sure you unselect `Install Python` on the installer.  For Linux, MacOS, and other posix operating systems simply run the `tinyfpgab-programmer.py` Python script. 
+4. The TinyFPGA B-Series GitHub Repository has Lattice iCEcube2 template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the iCE40 FPGA chip.  You could [download the latest files directly in a zip file](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip) or [clone the repo using git](https://github.com/tinyfpga/TinyFPGA-B-Series.git).
 
 ### First Project Tutorial
 
