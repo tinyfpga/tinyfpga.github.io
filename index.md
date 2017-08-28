@@ -26,7 +26,7 @@ The A- and B-Series boards use different FPGA families and their toolchains are 
 
 ### [A-Series Guide](a-series-guide.html)
 
-### B-Series Guide Coming Soon
+### [B-Series Guide](b-series-guide.html)
 
 ## Digital Design Tools
 ### A-Series
