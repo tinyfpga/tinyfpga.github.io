@@ -16,9 +16,14 @@ Of course you will need to purchase one or more B-Series boards, but you will al
 You will need to install the latest development environment and other support tools for the iCE40 FPGAs and the B-Series boards.
 
 1. Download and install [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2).  It is available for both Windows and Linux.
-2. [Request a free license file](http://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/DiamondFree.aspx) in order to use the [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) software.
+2. [Request a free license file](http://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/DiamondFree.aspx) in order to use the [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) software.  Lattice has [detailed instructions on requesting a free license](http://www.latticesemi.com/en/Support/AnswerDatabase/3/9/2/3925.aspx) if you need some help.
 3. Download and install the latest [TinyFPGA Programmer](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases) release.  This application is written in Python but has a Windows installer.  If you have Python already installed on Windows, make sure you unselect `Install Python` on the installer.  For Linux, MacOS, and other posix operating systems simply run the `tinyfpgab-programmer.py` Python script. 
 4. The TinyFPGA B-Series GitHub Repository has Lattice iCEcube2 template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the iCE40 FPGA chip.  You could [download the latest files directly in a zip file](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip) or [clone the repo using git](https://github.com/tinyfpga/TinyFPGA-B-Series.git).
+
+### Serial Port Driver 
+**IMPORTANT:** If you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA B-Series boards.  Paul Stofferegen, the creator of the [Teensy](https://www.pjrc.com/teensy/) series of microcontroller boards has an installer that works very well for this.
+
+Download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
 
 ### First Project Tutorial
 
@@ -41,6 +46,8 @@ Now that your board has pins on it it can be inserted into a solderless breadboa
 #### 3. Connect USB cable
 
 Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.
+
+**REMINDER:** If you use a version of Windows older than Windows 10, download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
 
 #### 4. Copy the template project from the [TinyFPGA B-Series Repository](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip)
 
