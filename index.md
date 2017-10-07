@@ -19,13 +19,12 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | User IO Pins          |     21      |     21      |     23      |
 | Price                 |[$12](http://store.tinyfpga.com/product/tinyfpga-a1)|[$18](http://store.tinyfpga.com/product/tinyfpga-a2)|[$38](http://store.tinyfpga.com/product/tinyfpga-b2)|   
 
-## Buy Now
-### Shipping From USA
+## Buy with Shipping from USA
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
 
 <a href="https://www.tindie.com/stores/tinyfpga/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/images/tindie-logo@2x.png" alt="Tindie" /></a>
 
-### Shipping From Europe
+## Buy with Shipping from Europe
 <a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/skin/frontend/default/elektor/images/logo.gif" alt="Elektor" /></a>
 
 ## User Guides
