@@ -8,7 +8,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 |                       | TinyFPGA A1 | TinyFPGA A2 | TinyFPGA B2 |
 |-----------------------|:-----------:|:-----------:|:-----------:|
-|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](bx-thumb.jpg)|
+|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](TinyFPGA-B2.png)|
 | FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP8K  |
 | Programming Interface |     JTAG    |     JTAG    |     USB     | 
 | Logic Cells           |     256     |     1200    |     7680    |
