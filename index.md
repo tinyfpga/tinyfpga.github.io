@@ -6,20 +6,28 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 ## TinyFPGA Boards
 
-|                       | TinyFPGA A1 | TinyFPGA A2 | TinyFPGA B1 | TinyFPGA B2 |
-|-----------------------|:-----------:|:-----------:|:-----------:|:-----------:|
-|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](bx-thumb.jpg)|![](bx-thumb.jpg)|
-| FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP4K  |  ICE40LP8K  |
-| Programming Interface |     JTAG    |     JTAG    |     USB     |     USB     | 
-| Logic Cells           |     256     |     1200    |     3520    |     7680    |
-| Distributed RAM       |   2 KBits   |   10 KBit   |             |             |
-| Block RAM             |             |   64 KBit   |   80 KBit   |   128 KBit  |
-| User Flash            |             |   64 KBit   |  2000 KBit  |  2000 KBit  |
-| Phase Lock Loops      |             |      1      |      1      |      1      |
-| User IO Pins          |     21      |     21      |     23      |     23      |
+|                       | TinyFPGA A1 | TinyFPGA A2 | TinyFPGA B2 |
+|-----------------------|:-----------:|:-----------:|:-----------:|
+|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](bx-thumb.jpg)|
+| FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP8K  |
+| Programming Interface |     JTAG    |     JTAG    |     USB     | 
+| Logic Cells           |     256     |     1200    |     7680    |
+| Distributed RAM       |   2 KBits   |   10 KBit   |             |
+| Block RAM             |             |   64 KBit   |   128 KBit  |
+| User Flash            |             |   64 KBit   |  2000 KBit  |
+| Phase Lock Loops      |             |      1      |      1      |
+| User IO Pins          |     21      |     21      |     23      |
 | Price                 |[$12](http://store.tinyfpga.com/product/tinyfpga-a1)|[$18](http://store.tinyfpga.com/product/tinyfpga-a2)|Coming Soon|[$38](http://store.tinyfpga.com/product/tinyfpga-b2)|   
 
-Buy now from the [TinyFPGA Store](http://store.tinyfpga.com) or from [Tindie](https://www.tindie.com/stores/tinyfpga/).
+## Buy Now
+### Shipping From USA
+Buy now from the [TinyFPGA Store](http://store.tinyfpga.com) or from [Tindie](https://www.tindie.com/stores/tinyfpga/). 
+<a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
+
+<a href="https://www.tindie.com/stores/tinyfpga/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/images/tindie-logo@2x.png" alt="Tindie" /></a>
+
+### Shipping From Europe
+<a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/skin/frontend/default/elektor/images/logo.gif" alt="Elektor" /></a>
 
 ## User Guides
 The A- and B-Series boards use different FPGA families and their toolchains are different.  See the below guides to learn how to get started.
