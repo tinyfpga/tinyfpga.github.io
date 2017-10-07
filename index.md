@@ -21,7 +21,6 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 ## Buy Now
 ### Shipping From USA
-Buy now from the [TinyFPGA Store](http://store.tinyfpga.com) or from [Tindie](https://www.tindie.com/stores/tinyfpga/). 
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
 
 <a href="https://www.tindie.com/stores/tinyfpga/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/images/tindie-logo@2x.png" alt="Tindie" /></a>
