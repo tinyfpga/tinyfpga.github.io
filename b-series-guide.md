@@ -51,7 +51,7 @@ Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimiz
 
 #### 4. Copy the template project from the [TinyFPGA B-Series Repository](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip)
 
-Copy the [`template`](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/template) directory to a new directory and rename it `blink_project_b`.
+Copy the [`icecube2_template`](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icecube2_template) directory to a new directory and rename it `blink_project_b`.
 
 #### 5. Open your newly copied template project
 
