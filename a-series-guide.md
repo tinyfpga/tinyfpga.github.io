@@ -22,6 +22,11 @@ You will need to install the latest development environment and other support to
 3. The TinyFPGA A-Series GitHub Repository has Lattice Diamond template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the MachXO2 FPGA chip.  You could [download the latest files directly in a zip file](https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip) or [clone the repo using git](https://github.com/tinyfpga/TinyFPGA-A-Series.git).
 4. Download and install the latest release of the [TinyFPGA Programmer Application](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases).  This programmer application is used for both the A-series and B-series boards.
 
+### Serial Port Driver 
+**IMPORTANT:** IF you plan on using the TinyFPGA Programmer and you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA Programmer.  Paul Stofferegen, the creator of the [Teensy](https://www.pjrc.com/teensy/) series of microcontroller boards has an installer that works very well for this.
+
+Download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
+
 ### First Project Tutorial
 
 Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won't go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, generating a bitstream for your TinyFPGA A1 or A2 board, and programming your board with the bitstream. 
