@@ -2,3 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
+
+@media print {
+  img {
+    width: 100%;
+  }
+}
