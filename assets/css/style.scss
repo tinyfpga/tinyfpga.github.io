@@ -3,8 +3,3 @@
 
 @import "{{ site.theme }}";
 
-@media print {
-  img {
-    max-width: 100%;
-  }
-}
