@@ -23,7 +23,7 @@ You will need to install the latest development environment and other support to
 4. Download and install the latest release of the [TinyFPGA Programmer Application](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases).  This programmer application is used for both the A-series and B-series boards.
 
 ### Serial Port Driver 
-**IMPORTANT:** IF you plan on using the TinyFPGA Programmer and you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA Programmer.  Paul Stofferegen, the creator of the [Teensy](https://www.pjrc.com/teensy/) series of microcontroller boards has an installer that works very well for this.
+**IMPORTANT:** If you plan on using the TinyFPGA Programmer and you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA Programmer.  Paul Stofferegen, the creator of the [Teensy](https://www.pjrc.com/teensy/) series of microcontroller boards has an installer that works very well for this.
 
 Download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
 
