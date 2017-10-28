@@ -118,6 +118,8 @@ The timer will increment by 1 every clock period.  We can use the upper bits to 
 
 At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the `CTRL + SHIFT + S` keyboard shortcut.  
 
+**TIP:** The mapping of TinyFPGA A-series board pin names to the FPGA pin names can be found in the [template_a1.lpf](https://github.com/tinyfpga/TinyFPGA-A-Series/blob/master/template_a1/template_a1.lpf) or [template_a2.lpf](https://github.com/tinyfpga/TinyFPGA-A-Series/blob/master/template_a1/template_a2.lpf) file.
+
 #### 7. Generate JEDEC programming file
 
 Select the `Process` tab on the left hand side view.  This will bring up a tree of tasks that need to be executed in order to generate the JEDEC programming file.  At the very bottom of the tree you should see an entry labeled `JEDEC File`.  Double-click that entry and the programming file should be created.  When it is done it will have a green checkmark next to it.
