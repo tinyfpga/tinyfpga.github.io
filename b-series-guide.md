@@ -120,6 +120,8 @@ The timer will increment by 1 every clock period.  We can use the upper bits to 
 
 At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the `CTRL + S` keyboard shortcut.  
 
+**TIP:** The mapping of TinyFPGA B-series board pin names to the FPGA pin names can be found in the [constraints/pins.pcf](https://github.com/tinyfpga/TinyFPGA-B-Series/blob/master/icecube2_template/constraints/pins.pcf) file.
+
 #### 7. Generate a hex programming file
 
 Go to the `Tool` file menu and select `Run All` to synthesize the design and generate a bitstream.  When synthesis is complete you should see a green checkmark next to the `Generate Bitmap` process.
