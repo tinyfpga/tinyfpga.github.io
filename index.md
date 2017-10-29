@@ -38,6 +38,10 @@ The A- and B-Series boards use different FPGA families and their toolchains are 
 
 I am developing a regular series of tutorials, articles, and hands-on labs utilizing the TinyFPGA boards.  They can be found on hackaday.io: [The Hobbyist's Guide to FPGAs](https://hackaday.io/project/27550-the-hobbyists-guide-to-fpgas).  If you are new to FPGAs and want to give them a try, this guide is for you.  If you haven't already, sign up for hackaday.io and follow the project to be notified when there are updates.
 
+## TinyFPGA Discourse Community
+
+A brand new Discourse server has been setup for TinyFPGA.  If you are interested in the TinyFPGA boards, join the [TinyFPGA Discourse](http://discourse.tinyfpga.com/) and ask away.  Luke is there often to help troubleshoot problems, answer questions, and post news.  Over time this will grow into the best place to meet other hobbyists, makers, and professionals interested in FPGAs and the TinyFPGA project.
+
 ## Digital Design Tools
 ### A-Series
 The A-series boards use the [Lattice Diamond](http://www.latticesemi.com/latticediamond) design software for synthesizing digital designs into FPGA bitstreams.  It can be downloaded for free from [Lattice Semiconductor's website](http://www.latticesemi.com/latticediamond).  Follow their instructions carefully to get a free license file.
