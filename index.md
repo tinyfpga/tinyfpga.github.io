@@ -64,4 +64,17 @@ The B-series boards have a built-in USB bootloader.  To program a bitstream use 
 
 ![](b-programmer.png)
 
+## Contact Information
+```
+email: luke@tinyfpga.com
+
+Luke Valenty
+TinyFPGA
+1750 Prairie City Rd
+Suite 130 #751
+Folsom, CA 95630
+```
+
+
+
 
