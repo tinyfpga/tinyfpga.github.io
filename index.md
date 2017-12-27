@@ -17,7 +17,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | User Flash            |             |   64 KBit   |  2000 KBit  |
 | Phase Lock Loops      |             |      1      |      1      |
 | User IO Pins          |     21      |     21      |     23      |
-| Price                 |[$12](http://store.tinyfpga.com/product/tinyfpga-a1)|[$18](http://store.tinyfpga.com/product/tinyfpga-a2)|[$38](http://store.tinyfpga.com/product/tinyfpga-b2)|   
+| Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://store.tinyfpga.com/products/tinyfpga-b2)|   
 
 ## Buy with Shipping from USA
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
