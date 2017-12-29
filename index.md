@@ -28,6 +28,8 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 * **CNXSoft - Embedded Systems News**
   * [TinyFPGA is a Breakout Board for Lattice Semi MachXO2 FPGA](https://www.cnx-software.com/2017/07/24/tinyfpga-is-a-breakout-board-for-lattice-semi-machxo2-fpga/)
   
+**[Customer Reviews](https://www.tindie.com/stores/tinyfpga/reviews/)**
+  
 ## Buy with Shipping from USA
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
 
