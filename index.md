@@ -19,6 +19,15 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | User IO Pins          |     21      |     21      |     23      |
 | Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://store.tinyfpga.com/products/tinyfpga-b2)|   
 
+## TinyFPGA in the News
+* **Hackaday.com**
+  * [TinyFPGA is a Tiny FPGA Board](https://hackaday.com/2017/07/31/tinyfpga-is-a-tiny-fpga-board/)
+  * [Hackaday Prize Entry: Programming FPGAs with Themselves](https://hackaday.com/2017/10/23/hackaday-prize-entry-programming-fpgas-with-themselves/)
+* **Hackster.io**
+  * [The Coming of the Age of the Maker FPGA Board](https://blog.hackster.io/the-coming-of-the-age-of-the-maker-fpga-board-52a29572549e)
+* **CNXSoft - Embedded Systems News**
+  * [TinyFPGA is a Breakout Board for Lattice Semi MachXO2 FPGA](https://www.cnx-software.com/2017/07/24/tinyfpga-is-a-breakout-board-for-lattice-semi-machxo2-fpga/)
+  
 ## Buy with Shipping from USA
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
 
