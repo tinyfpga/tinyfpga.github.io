@@ -58,11 +58,9 @@ A brand new Discourse server has been setup for TinyFPGA.  If you are interested
 The A-series boards use the [Lattice Diamond](http://www.latticesemi.com/latticediamond) design software for synthesizing digital designs into FPGA bitstreams.  It can be downloaded for free from [Lattice Semiconductor's website](http://www.latticesemi.com/latticediamond).  Follow their instructions carefully to get a free license file.
 
 ### B-Series
-The B-series boards use the [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) design software for synthesizing digital designs into FPGA bitstreams.  It can also be downloaded for free from [Lattice Semiconductor's website](http://www.latticesemi.com/iCEcube2).  Just like Lattice Diamond, iCEcube2 requires a free license file to be downloaded so be sure to follow their directions carefully.
+The B-series boards use the open source [Project IceStorm](http://www.clifford.at/icestorm/) tools or [Lattice iCEcube2](http://www.latticesemi.com/iCEcube2) design software for synthesizing digital designs into FPGA bitstreams.  Just like Lattice Diamond, iCEcube2 requires a free license file to be downloaded so be sure to follow their directions carefully.  The open source IceStore toolchain needs no special license.
 
-There is an opensource alternative available for the B-series boards called [Project IceStorm](http://www.clifford.at/icestorm/) however this has not yet been tested with the TinyFPGA boards.
-
-To jumpstart development a simple [iCEcube2 project template](https://github.com/tinyfpga/TinyFPGA-B-series/tree/master/template) is provided with a top-level verilog file that represents the pins on the B-series boards.  This project contains a timing constraint for the 16MHz clock and pin constraints for each of the pins.  You can download the template as part of the [TinyFPGA B-Series Repository ZIP](https://github.com/tinyfpga/TinyFPGA-B-series/archive/master.zip).
+To jumpstart development simple [iCEcube2 project template](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icecube2_template) and [IceStorm project template](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icestorm_template) projects are provided with top-level verilog files that represent the pins on the B-series boards.  These projects contain a timing constraint for the 16MHz clock and pin constraints for each of the pins.  You can download the template as part of the [TinyFPGA B-Series Repository ZIP](https://github.com/tinyfpga/TinyFPGA-B-series/archive/master.zip).
 
 ## FPGA Programmer
 ### A-Series
