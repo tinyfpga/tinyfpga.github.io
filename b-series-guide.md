@@ -122,7 +122,7 @@ At this point you should save all your changes by clicking the floppy disk icon 
 
 **TIP:** The mapping of TinyFPGA B-series board pin names to the FPGA pin names can be found in the [constraints/pins.pcf](https://github.com/tinyfpga/TinyFPGA-B-Series/blob/master/icecube2_template/constraints/pins.pcf) file.
 
-#### 7. Generate a hex programming file
+#### 7. Generate a programming file
 
 Go to the `Tool` file menu and select `Run All` to synthesize the design and generate a bitstream.  When synthesis is complete you should see a green checkmark next to the `Generate Bitmap` process.
 
@@ -144,6 +144,9 @@ If this happens you can press the reset button on the B-Series board to active t
 ![](b-series-bootloader-active.png)
 
 Select the bitstream to program.  This will be buried a few directories under the project: `template_Implmnt/sbt/outputs/bitmap/TinyFPGA_B_bitmap.hex`
+
+If you're using IceStorm for synthesis the bitstream will be a `.bin` file in the same directory as your project:
+`icestorm_template/TinyFPGA_B.bin`
 
 ![](b-series-ready-to-program.png)
 
