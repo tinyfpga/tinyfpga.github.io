@@ -8,8 +8,8 @@ The TinyFPGA B-Series boards use Lattice Semiconductor's iCE40 FPGAs.  There are
 ### Hardware
 Of course you will need to purchase one or more B-Series boards, but you will also need a few other things to get working.
 
-1. TinyFPGA [B2](http://store.tinyfpga.com/product/tinyfpga-B2) Board (the B1 board is not yet available).
-2. [Pins](http://store.tinyfpga.com/product/b-series-pins) if you want to solder the board to another PCB, insert it into a socket, or use with a solderless breadboard.
+1. TinyFPGA [B2](http://store.tinyfpga.com/products/tinyfpga-B2) Board.
+2. Pins if you want to solder the board to another PCB, insert it into a socket, or use with a solderless breadboard.
 3. [Something](https://www.google.com/search?q=godzilla+robot&safe=active&tbm=isch) [interesting](https://www.google.com/search?q=quad+copter&safe=active&tbm=isch) [to](https://www.google.com/search?q=3d+printer+open+source&safe=active&tbm=isch) [control](https://www.google.com/search?q=vga+graphics&safe=active&tbm=isch) [or](https://www.google.com/search?q=retro+console&safe=active&tbm=isch) [interface](https://www.google.com/search?q=retro+computer&safe=active&tbm=isch) [with](https://www.google.com/search?q=tcp+ip&safe=active&tbm=isch).  If you are just starting out you could use some LEDs or maybe a logic analyzer.  Otherwise you might have something more specific in mind ;)
 
 ### Software
