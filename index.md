@@ -6,25 +6,29 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 ## TinyFPGA Boards
 
-|                       | TinyFPGA A1 | TinyFPGA A2 | TinyFPGA B2 |
+|                       | TinyFPGA A1 | TinyFPGA A2 | TinyFPGA BX |
 |-----------------------|:-----------:|:-----------:|:-----------:|
-|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](TinyFPGA-B2.png)|
-| FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP8K  |
+|                       |![](a1-thumb.jpg)|![](a2-thumb.jpg)|![](TinyFPGA-BX.png)|
+| FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP8K  |
 | Programming Interface |     JTAG    |     JTAG    |     USB     | 
 | Logic Cells           |     256     |     1200    |     7680    |
 | Distributed RAM       |   2 KBits   |   10 KBit   |             |
 | Block RAM             |             |   64 KBit   |   128 KBit  |
-| User Flash            |             |   64 KBit   |  2000 KBit  |
+| User Flash            |             |   64 KBit   |  6000 KBit  |
 | Phase Lock Loops      |             |      1      |      1      |
-| User IO Pins          |     21      |     21      |     23      |
-| Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://store.tinyfpga.com/products/tinyfpga-b2)|   
+| User IO Pins          |     21      |     21      |     41      |
+| Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|   
 
 ## TinyFPGA in the News
+* **EEWeb.com**
+  * [A Look at TinyFPGA Boards](https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards)
+  * [Grinding Coffee with a TinyFPGA Board](https://www.eeweb.com/profile/duane-benson-2/articles/grinding-coffee-with-a-tinyfpga-board)
+* **Hackster.io**
+  * [The Next Generation of TinyFPGAs](https://blog.hackster.io/the-next-generation-of-tinyfpgas-722742afe783)
+  * [The Coming of the Age of the Maker FPGA Board](https://blog.hackster.io/the-coming-of-the-age-of-the-maker-fpga-board-52a29572549e)
 * **Hackaday.com**
   * [TinyFPGA is a Tiny FPGA Board](https://hackaday.com/2017/07/31/tinyfpga-is-a-tiny-fpga-board/)
   * [Hackaday Prize Entry: Programming FPGAs with Themselves](https://hackaday.com/2017/10/23/hackaday-prize-entry-programming-fpgas-with-themselves/)
-* **Hackster.io**
-  * [The Coming of the Age of the Maker FPGA Board](https://blog.hackster.io/the-coming-of-the-age-of-the-maker-fpga-board-52a29572549e)
 * **CNXSoft - Embedded Systems News**
   * [TinyFPGA is a Breakout Board for Lattice Semi MachXO2 FPGA](https://www.cnx-software.com/2017/07/24/tinyfpga-is-a-breakout-board-for-lattice-semi-machxo2-fpga/)
   
