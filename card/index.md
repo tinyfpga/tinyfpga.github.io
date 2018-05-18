@@ -21,3 +21,7 @@ The components are 0805 sized or larger.  They can all be soldered by hand, or y
 ### Programming the Board
 
 If you haven't used the TinyFPGA A-series boards before, go through the [TinyFPGA A-series guide](http://tinyfpga.com/a-series-guide.html) to familiarize yourself with the software and development flow.
+
+## More Updates to Come
+
+This page will have a full build guide along with template projects and examples to try out when I get back from Maker Faire.
