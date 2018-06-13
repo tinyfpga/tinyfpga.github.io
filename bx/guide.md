@@ -58,7 +58,7 @@ Once you have all of your hardware and software ready you can get started develo
 
 Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.  The power LED should light up when the board is connected.  The boot LED should pulse on and off to indicate the bootloader is active.
 
-![](powered_tinyfpgabx.JPG)
+![](powered_tinyfpga_bx.JPG)
 
 ### 2. Copy the template project from the [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX/archive/master.zip)
 
@@ -81,8 +81,6 @@ From the "Apio" menu, select "Upload".  The project will automatically be built 
 If everything is working as it should, you should see the user LED on the board blinking a "SOS" in morse code.  
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your open hardware FPGA board with open source tools.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
-
-![](tinyfpga-bx-blinky.jpg)
 
 ## Extra Resources
 * [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX)
