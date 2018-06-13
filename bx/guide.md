@@ -58,7 +58,7 @@ Once you have all of your hardware and software ready you can get started develo
 
 Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.  The power LED should light up when the board is connected.  The boot LED should pulse on and off to indicate the bootloader is active.
 
-![](powered_tinyfpgabx.jpg)
+![](powered_tinyfpgabx.JPG)
 
 ### 2. Copy the template project from the [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX/archive/master.zip)
 
