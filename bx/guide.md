@@ -24,9 +24,11 @@ You will need to install the latest development environment and other support to
 
 #### 1. Download and install [Atom](https://atom.io/).
 
-#### 2. Install the APIO-IDE package for Atom.
+#### 2. Install Python
 
-#### 3. Install APIO
+#### 3. Install the APIO-IDE package for Atom.
+
+#### 4. Install APIO
 
 
 
@@ -36,90 +38,19 @@ Once you have all of your hardware and software ready you can get started develo
 
 #### 1. Connect USB cable
 
-Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.
+Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.  The power LED should light up when the board is connected.  The boot LED should pulse on and off to indicate the bootloader is active.
 
-**REMINDER:** If you use a version of Windows older than Windows 10, download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
+#### 2. Copy the template project from the [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX/archive/master.zip)
 
-#### 4. Copy the template project from the [TinyFPGA B-Series Repository](https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip)
+Copy the [`apio_template`](https://github.com/tinyfpga/TinyFPGA-BX/tree/master/apio_template) directory to a new directory and rename it `blink_project`.
 
-Copy the [`icecube2_template`](https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icecube2_template) directory to a new directory and rename it `blink_project_b`.
-
-#### 5. Open your newly copied template project
+#### 3. Open your newly copied template project
 
 Open the Lattice iCEcube2 application.  From the `File` menu select `Open` and `Project...`.  In the newly opened file chooser, navigate to the `blink_project_b` directory you just created and select the `template_sbt.project` project file.
 
 ![](lattice-icecube2-select-project.png)
 
-#### 6. Implement your logic
-
-Now that we have opened our new project we can write some verilog code.  On the left side of the iCEcube2 user interface is a tree of files and processes representing the project.  Under `Synthesis Tool/Add Synthesis Files/Design Files`, select the `TinyFPGA_B.v` verilog file.
-
-![](lattice-icecube2-top-level.png)
-
-This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA B-Series boards.  Right now this top-level is assigning all the pins to `1'bz`.  This means the pins will be left floating or disconnected.  Let's implement some logic to blink a few LEDs.
-
-Before we can do anything, we need a clock source.  The TinyFPGA B-Series boards have an on-board 16MHz clock we can use.  This clock is available on pin 3.  We can also use the internal PLL to generate a new clock frequency.
-
-```verilog
-  wire clk_10mhz;
-
-  SB_PLL40_CORE usb_pll_inst (
-    .REFERENCECLK(pin3_clk_16mhz),
-    .PLLOUTCORE(clk_10mhz),
-    .RESETB(1),
-    .BYPASS(0)
-  );
-
-  // Fin=16, Fout=10;
-  defparam usb_pll_inst.DIVR = 0; 
-  defparam usb_pll_inst.DIVF = 9; 
-  defparam usb_pll_inst.DIVQ = 4;
-  defparam usb_pll_inst.FILTER_RANGE = 3'b001;
-  defparam usb_pll_inst.FEEDBACK_PATH = "SIMPLE";
-  defparam usb_pll_inst.DELAY_ADJUSTMENT_MODE_FEEDBACK = "FIXED";
-  defparam usb_pll_inst.FDA_FEEDBACK = 4'b0000;
-  defparam usb_pll_inst.DELAY_ADJUSTMENT_MODE_RELATIVE = "FIXED";
-  defparam usb_pll_inst.FDA_RELATIVE = 4'b0000;
-  defparam usb_pll_inst.SHIFTREG_DIV_MODE = 2'b00;
-  defparam usb_pll_inst.PLLOUT_SELECT = "GENCLK";
-  defparam usb_pll_inst.ENABLE_ICEGATE = 1'b0;
-```
-
-We don't need a high frequency to blink some LEDs, but there are limits to how slow the PLL can operate.  Further reduction of the clock frequency can be achieved in the digital logic.  PLLs can be complicated to program correctly.  It is highly recommended that you read and understand the [iCE40 sysCLOCK PLL Design and Usage Guide](http://www.latticesemi.com/view_document?document_id=47778).  Until you get around to reading that document, the following formula is most important: 
-
-![](ice40-pll-formula.png)
-
-_NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this tutorial._
-
-Now that we have a clock we can implement some sequential logic.  We will create a simple counter to time the blinking of our LEDs.
-
-```verilog
-  reg [25:0] led_timer;
-  
-  always @(posedge clk_10mhz) begin
-    led_timer <= led_timer + 1; 
-  end
-```
-
-The timer will increment by 1 every clock period.  We can use the upper bits to blink our LEDs but we need to assign them to external pins.  Edit the corresponding `assign` statements so they match the code below.
-
-```verilog
-  assign pin11 = led_timer[25];
-  assign pin12 = led_timer[24];
-  assign pin13 = led_timer[23];
-```
-
-At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the `CTRL + S` keyboard shortcut.  
-
-**TIP:** The mapping of TinyFPGA B-series board pin names to the FPGA pin names can be found in the [constraints/pins.pcf](https://github.com/tinyfpga/TinyFPGA-B-Series/blob/master/icecube2_template/constraints/pins.pcf) file.
-
-#### 7. Generate a programming file
-
-Go to the `Tool` file menu and select `Run All` to synthesize the design and generate a bitstream.  When synthesis is complete you should see a green checkmark next to the `Generate Bitmap` process.
-
-![](lattice-icecube2-generate-bitmap.png)
-
-#### 8. Program the FPGA board
+#### 4. Program the FPGA board
 
 * In Windows, open the 'TinyFPGA Programmer' application via the start menu.
 * In MacOS and Linux, open the `TinyFPGA Programmer` application by running the `tinyfpgab-programmer.py` python module from the [TinyFPGA Programmer Application GitHub Repo](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases/).
@@ -149,14 +80,14 @@ The programmer application will verify the bitstream was written correctly and r
 
 #### 9. Verify the design works on the board as intended
 
-If you followed this tutorial exactly you should see the three LEDs counting in binary.  One will stay on for about a second, then off for a second.  The next will be on for two seconds and off for two seconds.  The last will be on for four seconds and off for four seconds.
+If everything is working as it should, you should see the user LED on the board blinking a "SOS" in morse code.  
 
-If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
+If you see the LEDs blinking congratulations!  You've successfully programmed your open hardware FPGA board with open source tools.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
 ![](tinyfpga-b-blinky.jpg)
 
 ### Extra Resources
-* [TinyFPGA B-Series Repository](https://github.com/tinyfpga/TinyFPGA-B-Series)
+* [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX)
 * [TinyFPGA B-Series Project on Hackaday.io](https://hackaday.io/project/26848-tinyfpga-b-series)
 * Generic FPGA and Verilog Tutorials
   * [http://www.fpga4fun.com/](http://www.fpga4fun.com/)
