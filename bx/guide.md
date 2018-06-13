@@ -17,8 +17,10 @@ Tools for the TinyFPGA BX require Python.  If you don't already have Python inst
 #### Windows
 1. Download and run the [Windows Python Installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64-webinstall.exe).
 2. **Important:** Check the "Add Python 3.6 to PATH" checkbox.
+![](install_python_1.png)
 3. Click on "Install Now"
 4. When Python has finished installing, click "Close".
+![](install_python_2.PNG)
 
 #### MacOS
 1. Download and run the [MacOS Python Installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.6.pkg).
@@ -42,8 +44,11 @@ These commands install APIO, tinyprog, as well as all of the necessary tools to 
 1. Download and run the [Atom Installer](https://atom.io/). When the installer finishes it should launch Atom.
 2. Go to "File" and click on "Settings".
 3. Click on the "Install" tab.
+!()[install_apio_ide_0.PNG]
 4. Type in "apio-ide" in the "Search Packages" text box and click "Packages".
+!()[install_apio_ide_1.png]
 5. Install "apio-ide". Click yes for any dependencies.  Ignore any warnings about the APIO version.
+!()[install_apio_ide_2.PNG]
 
 ## First Project Tutorial
 
@@ -61,11 +66,13 @@ Copy the [`apio_template`](https://github.com/tinyfpga/TinyFPGA-BX/tree/master/a
 
 Open up Atom.  From the "File" menu select "Open Folder...".  In the newly opened file chooser, navigate to the "blink_project" directory you just created and click "Select Folder".
 
-![](lattice-icecube2-select-project.png)
+![](apio_ide_project.PNG)
 
 ### 4. Program the FPGA board
 
 From the "Apio" menu, select "Upload".  The project will automatically be built and uploaded to the TinyFPGA BX board.
+
+![](apio_ide_success.PNG)
 
 ### 5. Verify the design works on the board as intended
 
@@ -73,7 +80,7 @@ If everything is working as it should, you should see the user LED on the board 
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your open hardware FPGA board with open source tools.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
-![](tinyfpga-b-blinky.jpg)
+![](tinyfpga-bx-blinky.jpg)
 
 ## Extra Resources
 * [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX)
