@@ -44,11 +44,11 @@ These commands install APIO, tinyprog, as well as all of the necessary tools to 
 1. Download and run the [Atom Installer](https://atom.io/). When the installer finishes it should launch Atom.
 2. Go to "File" and click on "Settings".
 3. Click on the "Install" tab.
-!()[install_apio_ide_0.PNG]
+![](install_apio_ide_0.PNG)
 4. Type in "apio-ide" in the "Search Packages" text box and click "Packages".
-!()[install_apio_ide_1.png]
+![](install_apio_ide_1.png)
 5. Install "apio-ide". Click yes for any dependencies.  Ignore any warnings about the APIO version.
-!()[install_apio_ide_2.PNG]
+![](install_apio_ide_2.PNG)
 
 ## First Project Tutorial
 
