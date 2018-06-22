@@ -49,9 +49,9 @@ The A- and B-Series boards use different FPGA families and their toolchains are 
 
 ### [A-Series Guide](a-series-guide.html)
 
-### [BX Guide](bx/guide.html)
-
-### [B2 Guide](b-series-guide.html)
+### B-Series Guides
+#### [BX Guide](bx/guide.html)
+#### [B2 Guide](b-series-guide.html)
 
 ## FPGA Tutorials
 
