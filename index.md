@@ -37,6 +37,8 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 ## Buy with Shipping from USA
 <a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
 
+<a href="https://www.crowdsupply.com/tinyfpga"><img src="crowd-supply-logo-dark.png" alt="Crowd Supply" /></a>
+
 <a href="https://www.tindie.com/stores/tinyfpga/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/images/tindie-logo@2x.png" alt="Tindie" /></a>
 
 ## Buy with Shipping from Europe
