@@ -32,12 +32,20 @@ Tools for the TinyFPGA BX require Python.  If you don't already have Python inst
 To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
-pip install apio==0.4.0b3 tinyprog
+pip install --upgrade --no-cache-dir apio==0.4.0b3 "tinyprog>=1.0.9"
 apio install system scons icestorm iverilog drivers
 apio drivers --serial-enable
 ```
 
 These commands install APIO, tinyprog, as well as all of the necessary tools to actually program the FPGA.
+
+Connect your TinyFPGA BX board(s) and make sure the bootloader is up to date by running the following command:
+
+```shell
+tinyprog --update-bootloader
+```
+
+This command will check for bootloader updates for all of the connected boards.  This is important to do to ensure your boards have the latest bootloaders with any known bugs fixed.
 
 ### 3. Download and install [Atom](https://atom.io/).
 [Atom](https://atom.io/) is an open source text editor and IDE that is very extensible.  The authors of APIO have created the [APIO-IDE](https://github.com/FPGAwars/apio-ide) plugin that enables APIO to be used from within Atom.  
