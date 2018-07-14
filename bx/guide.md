@@ -90,6 +90,25 @@ If everything is working as it should, you should see the user LED on the board 
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your open hardware FPGA board with open source tools.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
+## Tips
+
+### Bootloader Behavior
+
+The bootloader behaves differently depending on what is connected to the USB port:
+* If the board is connected to a USB host, the bootloader will stay active.  It will wait to be programmed by `tinyprog`.  You can manually exit the bootloader and load the user image from the onboard SPI flash by running `tinyprog -b`.
+* If the board is connected to a dumb power supply, the bootloader will timeout after one second and load the existing user image from the onboard SPI flash.
+
+Pressing the reset button will always return the board to the bootloader, but it will only stay in the bootloader if its plugged into a USB host.
+
+### Updating the Bootloader
+
+The following incantation will update `tinyprog` if there is a new version available, and check for updates for the bootloaders on all connected TinyFPGA BX boards.  `tinyprog` will give you the option to automatically update the bootloader if an update is available for your board(s).  It will list any release notes as well.
+
+```shell
+pip install --upgrade --no-cache-dir "tinyprog>=1.0.9"
+tinyprog --update-bootloader
+```
+
 ## Extra Resources
 * [TinyFPGA BX Repository](https://github.com/tinyfpga/TinyFPGA-BX)
 * [TinyFPGA B-Series Project on Hackaday.io](https://hackaday.io/project/26848-tinyfpga-b-series)
