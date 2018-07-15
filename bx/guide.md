@@ -32,7 +32,7 @@ Tools for the TinyFPGA BX require Python.  If you don't already have Python inst
 To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
-pip install --upgrade --no-cache-dir apio==0.4.0b3 "tinyprog>=1.0.9"
+pip install --upgrade --no-cache-dir apio==0.4.0b3 "tinyprog>=1.0.10"
 apio install system scons icestorm iverilog drivers
 apio drivers --serial-enable
 ```
