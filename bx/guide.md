@@ -14,6 +14,9 @@ You will need to install the latest development environment and other support to
 ### 1. Install Python
 Tools for the TinyFPGA BX require Python.  If you don't already have Python installed, follow the directions below.  Linux users should already have Python installed.
 
+#### Linux
+Most Linux distributions install Python by default.  If not, install Python using your distribution's package manager. 
+
 #### Windows
 1. Download and run the [Windows Python Installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64-webinstall.exe).
 2. **Important:** Check the "Add Python 3.6 to PATH" checkbox.
