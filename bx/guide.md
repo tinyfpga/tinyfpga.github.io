@@ -36,7 +36,7 @@ To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
 pip install --upgrade --no-cache-dir apio==0.4.0b3 "tinyprog>=1.0.10"
-apio install system scons icestorm iverilog drivers
+apio install system scons icestorm iverilog
 apio drivers --serial-enable
 ```
 
