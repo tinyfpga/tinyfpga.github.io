@@ -6,17 +6,18 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 ## TinyFPGA Boards
 
-|                       | [TinyFPGA A1](https://store.tinyfpga.com/products/tinyfpga-a1) | [TinyFPGA AX2](https://store.tinyfpga.com/products/tinyfpga-a2) | [TinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) |
-|-----------------------|:-----------:|:-----------:|:-----------:|
-|                       |[![](a1-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a1)|[![](a2-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a2)|[![](TinyFPGA-BX.png)](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|
-| FPGA Chip             |   XO2-256   |   XO2-1200  |  ICE40LP8K  |
-| Programming Interface |     JTAG    |     JTAG    |     USB     | 
-| Logic Cells           |     256     |     1200    |     7680    |
-| Distributed RAM       |   2 KBits   |   10 KBit   |             |
-| Block RAM             |             |   64 KBit   |   128 KBit  |
-| User Flash            |             |   64 KBit   |  6000 KBit  |
-| Phase Lock Loops      |             |      1      |      1      |
-| User IO Pins          |     21      |     21      |     41      |
+|                                   | [TinyFPGA A1](https://store.tinyfpga.com/products/tinyfpga-a1) | [TinyFPGA AX2](https://store.tinyfpga.com/products/tinyfpga-a2) | [TinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) | TinyFPGA EX |
+|-----------------------------------|:-----------:|:-----------:|:-----------:|:-----------:|
+|                                   |[![](a1-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a1)|[![](a2-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a2)|[![](TinyFPGA-BX.png)](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|![](TinyFPGA-EX.png)|
+| FPGA Chip                         |   XO2-256   |   XO2-1200  |  ICE40LP8K  | LFE5U-25F  |
+| Programming Interface             |     JTAG    |     JTAG    |     USB     |    USB     |
+| Logic Cells                       |     256     |     1200    |     7680    |   24288    |
+| Distributed RAM                   |    2 KBit   |   10 KBit   |             |   194 KBit |
+| Block RAM                         |             |   64 KBit   |   128 KBit  |  1008 KBit |
+| User Flash                        |             |   64 KBit   |  6000 KBit  | 96000 KBit |
+| Phase Lock Loops                  |             |      1      |      1      |     2      |  
+| Delay Lock Loops                  |             |             |             |     2      |  
+| User IO Pins (dedicated + shared) |    18 + 4   |    18 + 4   |   31 + 10   |   49 + 7   |
 | Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|   
 
 ## TinyFPGA in the News
