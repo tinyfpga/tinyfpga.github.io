@@ -35,7 +35,7 @@ Most Linux distributions install Python by default.  If not, install Python usin
 To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
-pip install --upgrade --no-cache-dir apio==0.4.0b3 "tinyprog>=1.0.10"
+pip install apio==0.4.0b3 tinyprog"
 apio install system scons icestorm iverilog
 apio drivers --serial-enable
 ```
@@ -108,7 +108,7 @@ Pressing the reset button will always return the board to the bootloader, but it
 The following incantation will update `tinyprog` if there is a new version available, and check for updates for the bootloaders on all connected TinyFPGA BX boards.  `tinyprog` will give you the option to automatically update the bootloader if an update is available for your board(s).  It will list any release notes as well.
 
 ```shell
-pip install --upgrade --no-cache-dir "tinyprog>=1.0.9"
+pip install --upgrade --no-cache-dir tinyprog
 tinyprog --update-bootloader
 ```
 
