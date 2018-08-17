@@ -35,7 +35,7 @@ Most Linux distributions install Python by default.  If not, install Python usin
 To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
-pip install apio==0.4.0b3 tinyprog"
+pip install apio==0.4.0b3 tinyprog
 apio install system scons icestorm iverilog
 apio drivers --serial-enable
 ```
