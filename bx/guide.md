@@ -15,7 +15,7 @@ You will need to install the latest development environment and other support to
 Tools for the TinyFPGA BX require Python.  If you don't already have Python installed, follow the directions below.  Linux users should already have Python installed.
 
 #### Linux
-Most Linux distributions install Python by default.  If not, install Python using your distribution's package manager. 
+Most Linux distributions install Python by default.  If not, install Python using your distribution's package manager.
 
 #### Windows
 1. Download and run the [Windows Python Installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64-webinstall.exe).
@@ -30,12 +30,12 @@ Most Linux distributions install Python by default.  If not, install Python usin
 2. Follow the instructions from the installer.
 
 ### 2. Install APIO and tinyprog
-[APIO](https://github.com/FPGAWARS/apio) is tool that makes it very easy to run the open source FPGA toolchain and program the design onto the FPGA board.  
+[APIO](https://github.com/FPGAwars/apio) is tool that makes it very easy to run the open source FPGA toolchain and program the design onto the FPGA board.  
 
 To install APIO and tinyprog, open up a terminal and run the following commands:
 
 ```shell
-pip install apio==0.4.0b3 tinyprog
+pip install -U apio tinyprog
 apio install system scons icestorm iverilog
 apio drivers --serial-enable
 ```
@@ -69,7 +69,7 @@ This command will check for bootloader updates for all of the connected boards. 
 
 ## First Project Tutorial
 
-Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won't go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, and programming the board with the project. 
+Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won't go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, and programming the board with the project.
 
 ### 1. Connect USB cable
 
