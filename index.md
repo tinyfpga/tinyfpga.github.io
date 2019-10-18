@@ -6,7 +6,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 
 ## TinyFPGA Boards
 
-|                                   | [TinyFPGA A1](https://store.tinyfpga.com/products/tinyfpga-a1) | [TinyFPGA AX2](https://store.tinyfpga.com/products/tinyfpga-a2) | [TinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) | TinyFPGA EX |
+|                                   | [TinyFPGA A1](https://store.tinyfpga.com/products/tinyfpga-a1) | [TinyFPGA AX2](https://store.tinyfpga.com/products/tinyfpga-a2) | [TinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) | [TinyFPGA EX](https://www.crowdsupply.com/tinyfpga/tinyfpga-ex) |
 |-----------------------------------|:-----------:|:-----------:|:-----------:|:-----------:|
 |                                   |[![](a1-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a1)|[![](a2-thumb.jpg)](https://store.tinyfpga.com/products/tinyfpga-a2)|[![](TinyFPGA-BX.png)](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|![](TinyFPGA-EX.png)|
 | FPGA Chip                         |   XO2-256   |   XO2-1200  |  ICE40LP8K  | LFE5U-25F  |
