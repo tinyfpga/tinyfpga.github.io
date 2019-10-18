@@ -18,7 +18,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 | Phase Lock Loops                  |             |      1      |      1      |     2      |  
 | Delay Lock Loops                  |             |             |             |     2      |  
 | User IO Pins (dedicated + shared) |    18 + 4   |    18 + 4   |   31 + 10   |   49 + 7   |
-| Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|   
+| Price                 |[$12](https://store.tinyfpga.com/products/tinyfpga-a1)|[$18](https://store.tinyfpga.com/products/tinyfpga-a2)|[$38](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx)|[info](https://www.crowdsupply.com/tinyfpga/tinyfpga-ex)|   
 
 ## TinyFPGA in the News
 * **EEWeb.com**
@@ -36,11 +36,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 **[Customer Reviews](https://www.tindie.com/stores/tinyfpga/reviews/)**
   
 ## Buy with Shipping from USA
-<a href="http://store.tinyfpga.com"><img src="TinyFPGA-Logo.png" alt="TinyFPGA Store" /></a>
-
 <a href="https://www.crowdsupply.com/tinyfpga"><img src="crowd-supply-logo-dark.png" alt="Crowd Supply" /></a>
-
-<a href="https://www.tindie.com/stores/tinyfpga/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/images/tindie-logo@2x.png" alt="Tindie" /></a>
 
 ## Buy with Shipping from Europe
 <a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/skin/frontend/default/elektor/images/logo.gif" alt="Elektor" /></a>
