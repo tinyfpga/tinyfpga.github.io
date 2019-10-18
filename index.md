@@ -39,7 +39,7 @@ The TinyFPGA boards are a new series of low-cost, [open-source](https://github.c
 <a href="https://www.crowdsupply.com/tinyfpga"><img src="crowd-supply-logo-dark.png" alt="Crowd Supply" /></a>
 
 ## Buy with Shipping from Europe
-<a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/skin/frontend/default/elektor/images/logo.gif" alt="Elektor" /></a>
+<a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/static/version1571406446/frontend/Elektor/default/en_US/images/elektor.svg" alt="Elektor" /></a>
 
 ## User Guides
 The A- and B-Series boards use different FPGA families and their toolchains are different.  See the below guides to learn how to get started.
