@@ -48,6 +48,12 @@ On Unix systems, you may need to add yourself to the `dialout` group in order fo
 sudo usermod -a -G dialout $USER
 ```
 
+On some Linux systems, the modem manager can get in the way of TinyFPGA coming up. The behavior that indicates this is that /dev/ttyACM0 disappears a few seconds after plugging the board in, or tinyprog can't find the device. You can confirm by looking through the logs (use dmesg to see the logs) for this error 'failed to set dtr/rts'. If that happens you can uninstall the modem manager with
+
+```shell
+sudo  apt-get purge modemmanager
+```
+
 Connect your TinyFPGA BX board(s) and make sure the bootloader is up to date by running the following command:
 
 ```shell
