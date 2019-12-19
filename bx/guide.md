@@ -42,7 +42,7 @@ apio drivers --serial-enable
 
 These commands install APIO, tinyprog, as well as all of the necessary tools to actually program the FPGA.
 
-On Unix systems, you may need to add yourself to the `dialout` group in order for your user to be able to access serial ports. You can do that by running:
+On Unix systems, you may need to add yourself to the `dialout` group in order for your user to be able to access serial ports. You can do that by running the following (don't forget to log out and log back in to apply group changes):
 
 ```
 sudo usermod -a -G dialout $USER
