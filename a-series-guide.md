@@ -1,11 +1,14 @@
 ---
 title: TinyFPGA A-Series User Guide
+layout: page
 ---
 
 ## Getting Started
+
 The TinyFPGA A-Series boards use Lattice Semiconductor's MachXO2 FPGAs.  There are a number of existing software and hardware tools available as well as documentation from Lattice for these FPGAs.  This guide will help get you started with the A-Series boards and the tools and information specific to them as well as the tools and documentation available for the FPGA chips themselves.
 
 ### Hardware
+
 Of course you will need to purchase one or more A-Series boards, but you will also need a few other things to get working.
 
 1. TinyFPGA [A1](http://store.tinyfpga.com/product/tinyfpga-a1) or [A2](http://store.tinyfpga.com/product/tinyfpga-a2) Board.
@@ -15,6 +18,7 @@ Of course you will need to purchase one or more A-Series boards, but you will al
 5. [Something](https://www.google.com/search?q=godzilla+robot&safe=active&tbm=isch) [interesting](https://www.google.com/search?q=quad+copter&safe=active&tbm=isch) [to](https://www.google.com/search?q=3d+printer+open+source&safe=active&tbm=isch) [control](https://www.google.com/search?q=vga+graphics&safe=active&tbm=isch) [or](https://www.google.com/search?q=retro+console&safe=active&tbm=isch) [interface](https://www.google.com/search?q=retro+computer&safe=active&tbm=isch) [with](https://www.google.com/search?q=tcp+ip&safe=active&tbm=isch).  If you are just starting out you could use some LEDs or maybe a logic analyzer.  Otherwise you might have something more specific in mind ;)
 
 ### Software
+
 You will need to install the latest development environment and other support tools for the MachXO2 FPGAs and the A-Series boards.
 
 1. Download and install [Lattice Diamond](http://www.latticesemi.com/latticediamond).  It is available for both [Windows](http://www.latticesemi.com/latticediamond#windows) and [Linux](http://www.latticesemi.com/latticediamond#linux).
@@ -23,6 +27,7 @@ You will need to install the latest development environment and other support to
 4. Download and install the latest release of the [TinyFPGA Programmer Application](https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases).  This programmer application is used for both the A-series and B-series boards.
 
 ### Serial Port Driver 
+
 **IMPORTANT:** If you plan on using the TinyFPGA Programmer and you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA Programmer.  Paul Stoffregen, the creator of the [Teensy](https://www.pjrc.com/teensy/) series of microcontroller boards has an installer that works very well for this.
 
 Download and run the [Virtual Serial Driver Installer](https://www.pjrc.com/teensy/serial_install.exe).
@@ -35,17 +40,17 @@ Once you have all of your hardware and software ready you can get started develo
 
 This tutorial will use the TinyFPGA board in a breadboard.  If you want to follow along you will need to solder pins to the board for it to drive the LEDs and to provide a connection for the JTAG programmer.
 
-![TinyFPGA A1 next to pins](tinyfpga-a-no-pins.jpg)
+![TinyFPGA A1 next to pins](images/tinyfpga-a-no-pins.jpg)
 
 The JTAG pins are on the board twice.  There is a header at the bottom of the board where the pins can be soldered on facing up.  This is most convenient if you want to connect your JTAG programmer directly to the board.  The JTAG pins are also on the right side of the board.  This is useful if you are taking advantage of the `JTAGENB` feature and want to use the JTAG pins for IO.  They are also useful if you want to add the TinyFPGA board to an existing JTAG chain in your project.
 
-![TinyFPGA A1 with pins](tinyfpga-a-with-pins.jpg)
+![TinyFPGA A1 with pins](images/tinyfpga-a-with-pins.jpg)
 
 #### 2. Build LED blinker circuit
 
 Now that your board has pins on it it can be inserted into a solderless breadboard.  In my breadboard I am using a [3.3 volt regulator](http://store.tinyfpga.com/product/a-series-3-3-volt-regulator-ld1117v33) to convert a 5 volt power source.  I connected LEDs to pins 9, 10, and 11 with 220 ohm resistors in series.
 
-![TinyFPGA blinker circuit](tinyfpga-a-tutorial-circuit.JPG)
+![TinyFPGA blinker circuit](images/tinyfpga-a-tutorial-circuit.jpg)
 
 #### 3. Connect JTAG programmer
 
@@ -53,7 +58,7 @@ Now that your board has pins on it it can be inserted into a solderless breadboa
 
 Connect the TinyFPGA Programmer to the TinyFPGA board.  Make sure the programmer is connected in the correct orientation.  You should be able to see the labels of the JTAG header pins on both the programmer and the TinyFPGA board.  If you need a 3.3 volt power source, there is a location on the TinyFPGA Programmer board where you can solder a header or wire to power your project.
 
-![TinyFPGA blinker circuit with JTAG programmer](tinyfpga-a-prog-front-tutorial.JPG)
+![TinyFPGA blinker circuit with JTAG programmer](images/tinyfpga-a-prog-front-tutorial.jpg)
 
 ##### Option 2: Use a Lattice Programming Cable
 
@@ -61,7 +66,7 @@ I had originally bought the [official Lattice Programming Cable](http://www.mous
 
 In my circuit I'm using the `5V Out` from the programming cable to drive the 3.3 volt regulator.  Make sure you connect the `VCC` wire from the programmer to 3.3 volts on your board.  That's the voltage level the programmer will use when communicating with the FPGA. 
 
-![TinyFPGA blinker circuit with JTAG programmer](tinyfpga-a-tutorial-programmer.JPG)
+![TinyFPGA blinker circuit with JTAG programmer](images/tinyfpga-a-tutorial-programmer.jpg)
 
 #### 4. Copy the template project from the [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip)
 
@@ -71,13 +76,13 @@ Copy either the [`template_a1`](https://github.com/tinyfpga/TinyFPGA-A-Series/tr
 
 Open the Lattice Diamond application.  From the `File` menu select `Open` and `Project...`.  In the newly opened file chooser, navigate to the `blink_project` directory you just created and select the `template_a1.ldf` or `template_a2.ldf` project file.
 
-![](lattice-diamond-select-project.png)
+![](images/lattice-diamond-select-project.png)
 
 #### 6. Implement your logic
 
 Now that we have opened our new project we can write some verilog code.  Make sure the `File List` tab is open on the left-hand side view and open up the `TinyFPGA_A1.v` or `TinyFPGA_A2.v` verilog file.
 
-![](lattice-diamond-a2-top-level.png)
+![](images/lattice-diamond-a2-top-level.png)
 
 This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA A-Series boards.  Right now this top-level is assigning all the pins to `1'bz`.  This means the pins will be left floating or disconnected.  Let's implement some logic to blink a few LEDs.
 
@@ -124,7 +129,7 @@ At this point you should save all your changes by clicking the floppy disk icon 
 
 Select the `Process` tab on the left hand side view.  This will bring up a tree of tasks that need to be executed in order to generate the JEDEC programming file.  At the very bottom of the tree you should see an entry labeled `JEDEC File`.  Double-click that entry and the programming file should be created.  When it is done it will have a green checkmark next to it.
 
-![](lattice-diamond-a2-project-view.png)
+![](images/lattice-diamond-a2-project-view.png)
 
 #### 8. Program the FPGA board
 
@@ -132,15 +137,15 @@ Select the `Process` tab on the left hand side view.  This will bring up a tree 
 
 Open up the TinyFPGA Programmer Application.  
 
-![](tinyfpga-a-prog-fpga-detected.png)
+![](images/tinyfpga-a-prog-fpga-detected.png)
 
 Navigate to your project's `impl` directory and select the `.jed` bitstream file.  
 
-![](tinyfpga-a-prog-fpga-ready.png)
+![](images/tinyfpga-a-prog-fpga-ready.png)
 
 If your TinyFPGA Programmer is connected correctly, it should indicate it is `Connected to TinyFPGA A1.  Ready to program.`.  Press the `Program FPGA` button to program the design onto the FPGA.
 
-![](tinyfpga-a-prog-fpga-done.png)
+![](images/tinyfpga-a-prog-fpga-done.png)
 
 ##### Option 2: Use a Lattice Programming Cable
 
@@ -148,11 +153,11 @@ From the `Tools` menu select `Programmer`.
 
 In the `Programmer: Getting Started` dialog make sure the `Create a new project from a JTAG scan` option is selected as well as the `Import file to current implementation` checkbox.
 
-![](lattice-programmer-getting-started.png)
+![](images/lattice-programmer-getting-started.png)
 
 Click on the program button to program the design onto the FPGA.
 
-![](lattice-diamond-program-button.png)
+![](images/lattice-diamond-program-button.png)
 
 #### 9. Verify the design works on the board as intended
 
@@ -160,7 +165,7 @@ If you followed this tutorial exactly you should see the three LEDs counting in 
 
 If you see the LEDs blinking congratulations!  You've successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).
 
-![](tinyfpga-a-blinky.jpg)
+![](images/tinyfpga-a-blinky.jpg)
 
 ### Extra Resources
 * [TinyFPGA A-Series Repository](https://github.com/tinyfpga/TinyFPGA-A-Series)

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TinyFPGA</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="TinyFPGA" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="TinyFPGA" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TinyFPGA" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"TinyFPGA","name":"TinyFPGA","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TinyFPGA" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">TinyFPGA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/a-series-guide.html">TinyFPGA A-Series User Guide</a><a class="page-link" href="/b-series-guide.html">TinyFPGA B-Series User Guide</a><a class="page-link" href="/bx/guide.html">TinyFPGA BX User Guide</a><a class="page-link" href="/">TinyFPGA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">TinyFPGA</h1><p>The TinyFPGA boards are a new series of low-cost, <a href="https://github.com/tinyfpga">open-source</a> FPGA boards in a tiny form factor.  Solder on pins for use in a breadboard or PCB socket; or solder connectors, wires, and components directly onto the board.</p>
+
+<h2 id="tinyfpga-boards">TinyFPGA Boards</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center"><a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx">TinyFPGA A1</a></th>
+      <th style="text-align: center"><a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx">TinyFPGA AX2</a></th>
+      <th style="text-align: center"><a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx">TinyFPGA BX</a></th>
+      <th style="text-align: center"><a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-ex">TinyFPGA EX</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>                     </td>
+      <td style="text-align: center"><a href="https://store.tinyfpga.com/products/tinyfpga-a1"><img src="images/a1-thumb.jpg" alt="" /></a></td>
+      <td style="text-align: center"><a href="https://store.tinyfpga.com/products/tinyfpga-a2"><img src="images/a2-thumb.jpg" alt="" /></a></td>
+      <td style="text-align: center"><a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx"><img src="images/tinyfpga-bx.png" alt="" /></a></td>
+      <td style="text-align: center"><img src="images/tinyfpga-ex.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td>FPGA Chip                        </td>
+      <td style="text-align: center">  XO2-256  </td>
+      <td style="text-align: center">  XO2-1200</td>
+      <td style="text-align: center">ICE40LP8K</td>
+      <td style="text-align: center">LFE5U-25F</td>
+    </tr>
+    <tr>
+      <td>Programming Interface</td>
+      <td style="text-align: center">JTAG</td>
+      <td style="text-align: center">JTAG</td>
+      <td style="text-align: center">USB</td>
+      <td style="text-align: center">USB</td>
+    </tr>
+    <tr>
+      <td>Logic Cells</td>
+      <td style="text-align: center">256</td>
+      <td style="text-align: center">1200</td>
+      <td style="text-align: center">7680</td>
+      <td style="text-align: center">24288</td>
+    </tr>
+    <tr>
+      <td>Distributed RAM</td>
+      <td style="text-align: center">2 KBit</td>
+      <td style="text-align: center">10 KBit</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">194 KBit</td>
+    </tr>
+    <tr>
+      <td>Block RAM</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">64 KBit</td>
+      <td style="text-align: center">128 KBit</td>
+      <td style="text-align: center">1008 KBit</td>
+    </tr>
+    <tr>
+      <td>User Flash</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">64 KBit</td>
+      <td style="text-align: center">6000 KBit</td>
+      <td style="text-align: center">96000 KBit</td>
+    </tr>
+    <tr>
+      <td>Phase Lock Loops</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td>Delay Lock Loops</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td>User IO Pins (dedicated + shared)</td>
+      <td style="text-align: center">18 + 4</td>
+      <td style="text-align: center">18 + 4</td>
+      <td style="text-align: center">31 + 10</td>
+      <td style="text-align: center">49 + 7</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tinyfpga-in-the-news">TinyFPGA in the News</h2>
+
+<ul>
+  <li><strong>EEWeb.com</strong>
+    <ul>
+      <li><a href="https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards">A Look at TinyFPGA Boards</a></li>
+      <li><a href="https://www.eeweb.com/profile/duane-benson-2/articles/grinding-coffee-with-a-tinyfpga-board">Grinding Coffee with a TinyFPGA Board</a></li>
+    </ul>
+  </li>
+  <li><strong>Hackster.io</strong>
+    <ul>
+      <li><a href="https://blog.hackster.io/the-next-generation-of-tinyfpgas-722742afe783">The Next Generation of TinyFPGAs</a></li>
+      <li><a href="https://blog.hackster.io/the-coming-of-the-age-of-the-maker-fpga-board-52a29572549e">The Coming of the Age of the Maker FPGA Board</a></li>
+    </ul>
+  </li>
+  <li><strong>Hackaday.com</strong>
+    <ul>
+      <li><a href="https://hackaday.com/2017/07/31/tinyfpga-is-a-tiny-fpga-board/">TinyFPGA is a Tiny FPGA Board</a></li>
+      <li><a href="https://hackaday.com/2017/10/23/hackaday-prize-entry-programming-fpgas-with-themselves/">Hackaday Prize Entry: Programming FPGAs with Themselves</a></li>
+    </ul>
+  </li>
+  <li><strong>CNXSoft - Embedded Systems News</strong>
+    <ul>
+      <li><a href="https://www.cnx-software.com/2017/07/24/tinyfpga-is-a-breakout-board-for-lattice-semi-machxo2-fpga/">TinyFPGA is a Breakout Board for Lattice Semi MachXO2 FPGA</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="buy-with-shipping-from-usa">Buy with Shipping from USA</h2>
+<p><a href="https://www.crowdsupply.com/tinyfpga"><img src="images/crowd-supply-logo-dark.png" alt="Crowd Supply" /></a></p>
+
+<h2 id="buy-with-shipping-from-europe">Buy with Shipping from Europe</h2>
+
+<p><a href="https://www.elektor.com/search?q=tinyfpga"><img src="https://www.elektor.com/static/version1571406446/frontend/Elektor/default/en_US/images/elektor.svg" width="218px" alt="Elektor" /></a></p>
+
+<h2 id="user-guides">User Guides</h2>
+
+<p>The A- and B-Series boards use different FPGA families and their toolchains are different.  See the below guides to learn how to get started.</p>
+
+<h3 id="a-series-guide"><a href="a-series-guide.html">A-Series Guide</a></h3>
+
+<h3 id="bx-guide"><a href="bx/guide.html">BX Guide</a></h3>
+
+<h2 id="fpga-tutorials">FPGA Tutorials</h2>
+
+<p>I am developing a regular series of tutorials, articles, and hands-on labs utilizing the TinyFPGA boards.  They can be found on hackaday.io: <a href="https://hackaday.io/project/27550-the-hobbyists-guide-to-fpgas">The Hobbyist’s Guide to FPGAs</a>.  If you are new to FPGAs and want to give them a try, this guide is for you.  If you haven’t already, sign up for hackaday.io and follow the project to be notified when there are updates.</p>
+
+<h2 id="tinyfpga-discourse-community">TinyFPGA Discourse Community</h2>
+
+<p>A brand new Discourse server has been setup for TinyFPGA.  If you are interested in the TinyFPGA boards, join the <a href="https://discourse.tinyfpga.com/">TinyFPGA Discourse</a> and ask away.  Luke is there often to help troubleshoot problems, answer questions, and post news.  Over time this will grow into the best place to meet other hobbyists, makers, and professionals interested in FPGAs and the TinyFPGA project.</p>
+
+<h2 id="digital-design-tools">Digital Design Tools</h2>
+
+<h3 id="a-series">A-Series</h3>
+
+<p>The A-series boards use the <a href="https://www.latticesemi.com/latticediamond">Lattice Diamond</a> design software for synthesizing digital designs into FPGA bitstreams.  It can be downloaded for free from <a href="https://www.latticesemi.com/latticediamond">Lattice Semiconductor’s website</a>.  Follow their instructions carefully to get a free license file.</p>
+
+<h3 id="b-series">B-Series</h3>
+
+<p>The B-series boards use the open source <a href="https://www.clifford.at/icestorm/">Project IceStorm</a> tools or <a href="https://www.latticesemi.com/iCEcube2">Lattice iCEcube2</a> design software for synthesizing digital designs into FPGA bitstreams.  Just like Lattice Diamond, iCEcube2 requires a free license file to be downloaded so be sure to follow their directions carefully.  The open source IceStore toolchain needs no special license.</p>
+
+<p>To jumpstart development simple <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icecube2_template">iCEcube2 project template</a> and <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icestorm_template">IceStorm project template</a> projects are provided with top-level verilog files that represent the pins on the B-series boards.  These projects contain a timing constraint for the 16MHz clock and pin constraints for each of the pins.  You can download the template as part of the <a href="https://github.com/tinyfpga/TinyFPGA-B-series/archive/master.zip">TinyFPGA B-Series Repository ZIP</a>.</p>
+
+<h2 id="fpga-programmer">FPGA Programmer</h2>
+
+<h3 id="a-series-1">A-Series</h3>
+
+<p>The A-series boards are programmed via JTAG.  There is a dedicated <a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx">TinyFPGA Programmer</a> available to purchase.  It is the most cost-effective and convenient programmer for the A-series boards.  It can be used with the <a href="https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases">TinyFPGA Programmer Application</a>.</p>
+
+<p>You can also use Lattice-compatible JTAG programmers <a href="https://www.ebay.com/sch/i.html?_productid=533163279">JTAG Programmer Hardware</a> and the <a href="https://www.latticesemi.com/programmer">Lattice Programmer Software</a>.</p>
+
+<h3 id="b-series-1">B-Series</h3>
+
+<p>The B-series boards have a built-in USB bootloader.  To program a bitstream use the <a href="https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases/">TinyFPGA B-Series Programmer</a> and select the serial port of the device and bitstream file.  If you are using Linux or OSX you can run the programmer application as a Python script.  It is available in the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/programmer">TinyFPGA B-Series GitHub Repo</a>. You can download the programmer python scripts as part of the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip">TinyFPGA B-Series Repository ZIP</a>.</p>
+
+<p><img src="images/b-programmer.png" alt="" /></p>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">TinyFPGA</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TinyFPGA</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/tinyfpga"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">tinyfpga</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

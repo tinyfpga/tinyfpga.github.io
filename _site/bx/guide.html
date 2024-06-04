@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TinyFPGA BX User Guide | TinyFPGA</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="TinyFPGA BX User Guide" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/bx/guide.html" />
+<meta property="og:url" content="http://localhost:4000/bx/guide.html" />
+<meta property="og:site_name" content="TinyFPGA" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TinyFPGA BX User Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"TinyFPGA BX User Guide","url":"http://localhost:4000/bx/guide.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TinyFPGA" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">TinyFPGA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/a-series-guide.html">TinyFPGA A-Series User Guide</a><a class="page-link" href="/b-series-guide.html">TinyFPGA B-Series User Guide</a><a class="page-link" href="/bx/guide.html">TinyFPGA BX User Guide</a><a class="page-link" href="/">TinyFPGA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TinyFPGA BX User Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="getting-started">Getting Started</h2>
+
+<p>The TinyFPGA BX boards use Lattice Semiconductor’s iCE40 FPGAs.  There are a number of existing software and hardware tools available as well as documentation from Lattice for these FPGAs.  This guide will help get you started with the BX board, the tools, and documentation available for the FPGA chips themselves.</p>
+
+<h2 id="hardware">Hardware</h2>
+
+<p>For this guide you will need a <a href="https://www.crowdsupply.com/tinyfpga/tinyfpga-bx">TinyFPGA BX</a> board and a micro USB cable.</p>
+
+<h2 id="software">Software</h2>
+
+<p>You will need to install the latest development environment and other support tools for the iCE40 FPGAs and the BX board.  The TinyFPGA BX is supported by open source tools.  These instructions should work for all platforms.</p>
+
+<h3 id="1-install-python">1. Install Python</h3>
+
+<p>Tools for the TinyFPGA BX require Python.  If you don’t already have Python installed, follow the directions below.  Linux users should already have Python installed.</p>
+
+<h4 id="linux">Linux</h4>
+
+<p>Most Linux distributions install Python by default.  If not, install Python using your distribution’s package manager.</p>
+
+<h4 id="windows">Windows</h4>
+
+<ol>
+  <li>Download and run the <a href="https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64-webinstall.exe">Windows Python Installer</a>.</li>
+  <li><strong>Important:</strong> Check the “Add Python 3.6 to PATH” checkbox.
+<img src="install_python_1.png" alt="" /></li>
+  <li>Click on “Install Now”</li>
+  <li>When Python has finished installing, click “Close”.
+<img src="images/install_python_2.png" alt="" /></li>
+</ol>
+
+<h4 id="macos">MacOS</h4>
+
+<ol>
+  <li>Download and run the <a href="https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.6.pkg">MacOS Python Installer</a>.</li>
+  <li>Follow the instructions from the installer.</li>
+</ol>
+
+<h3 id="2-install-apio-and-tinyprog">2. Install APIO and tinyprog</h3>
+
+<p><a href="https://github.com/FPGAWARS/apio">APIO</a> is tool that makes it very easy to run the open source FPGA toolchain and program the design onto the FPGA board.</p>
+
+<p>To install APIO and tinyprog, open up a terminal and run the following commands:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span><span class="nv">apio</span><span class="o">==</span>0.4.0b5 tinyprog
+apio <span class="nb">install </span>system scons icestorm iverilog
+apio drivers <span class="nt">--serial-enable</span>
+</code></pre></div></div>
+
+<p>These commands install APIO, tinyprog, as well as all of the necessary tools to actually program the FPGA.</p>
+
+<p>On Unix systems, you may need to add yourself to the <code class="language-plaintext highlighter-rouge">dialout</code> group in order for your user to be able to access serial ports. You can do that by running:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -a -G dialout $USER
+</code></pre></div></div>
+
+<p>Connect your TinyFPGA BX board(s) and make sure the bootloader is up to date by running the following command:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tinyprog <span class="nt">--update-bootloader</span>
+</code></pre></div></div>
+
+<p>This command will check for bootloader updates for all of the connected boards.  This is important to do to ensure your boards have the latest bootloaders with any known bugs fixed.</p>
+
+<h3 id="3-download-and-install-atom">3. Download and install <a href="https://atom.io/">Atom</a>.</h3>
+
+<p><a href="https://atom.io/">Atom</a> is an open source text editor and IDE that is very extensible.  The authors of APIO have created the <a href="https://github.com/FPGAwars/apio-ide">APIO-IDE</a> plugin that enables APIO to be used from within Atom.</p>
+<ol>
+  <li>Download and run the <a href="https://atom.io/">Atom Installer</a>. When the installer finishes it should launch Atom.</li>
+  <li>Go to “File” and click on “Settings”.</li>
+  <li>Click on the “Install” tab.
+<img src="images/install_apio_ide_0.png" alt="" /></li>
+  <li>Type in “apio-ide” in the “Search Packages” text box and click “Packages”.
+<img src="install_apio_ide_1.png" alt="" /></li>
+  <li>Install “apio-ide”. Click yes for any dependencies.  Ignore any warnings about the APIO version.
+<img src="images/install_apio_ide_2.png" alt="" /></li>
+</ol>
+
+<h2 id="first-project-tutorial">First Project Tutorial</h2>
+
+<p>Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won’t go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, and programming the board with the project.</p>
+
+<h3 id="1-connect-usb-cable">1. Connect USB cable</h3>
+
+<p>Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.  The power LED should light up when the board is connected.  The boot LED should pulse on and off to indicate the bootloader is active.</p>
+
+<p><img src="images/powered_tinyfpga_bx.jpg" alt="" /></p>
+
+<h3 id="2-copy-the-template-project-from-the-tinyfpga-bx-repository">2. Copy the template project from the <a href="https://github.com/tinyfpga/TinyFPGA-BX/archive/master.zip">TinyFPGA BX Repository</a></h3>
+
+<p>Copy the <a href="https://github.com/tinyfpga/TinyFPGA-BX/tree/master/apio_template"><code class="language-plaintext highlighter-rouge">apio_template</code></a> directory to a new directory and rename it <code class="language-plaintext highlighter-rouge">blink_project</code>.</p>
+
+<h3 id="3-open-your-newly-copied-template-project">3. Open your newly copied template project</h3>
+
+<p>Open up Atom.  From the “File” menu select “Open Folder…”.  In the newly opened file chooser, navigate to the “blink_project” directory you just created and click “Select Folder”.</p>
+
+<p><img src="images/apio_ide_project.png" alt="" /></p>
+
+<h3 id="4-program-the-fpga-board">4. Program the FPGA board</h3>
+
+<p>From the “Apio” menu, select “Upload”.  The project will automatically be built and uploaded to the TinyFPGA BX board.</p>
+
+<p><img src="images/apio_ide_success.png" alt="" /></p>
+
+<h3 id="5-verify-the-design-works-on-the-board-as-intended">5. Verify the design works on the board as intended</h3>
+
+<p>If everything is working as it should, you should see the user LED on the board blinking a “SOS” in morse code.</p>
+
+<p>If you see the LEDs blinking congratulations!  You’ve successfully programmed your open hardware FPGA board with open source tools.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).</p>
+
+<h2 id="tips">Tips</h2>
+
+<h3 id="bootloader-behavior">Bootloader Behavior</h3>
+
+<p>The bootloader behaves differently depending on what is connected to the USB port:</p>
+<ul>
+  <li>If the board is connected to a USB host, the bootloader will stay active.  It will wait to be programmed by <code class="language-plaintext highlighter-rouge">tinyprog</code>.  You can manually exit the bootloader and load the user image from the onboard SPI flash by running <code class="language-plaintext highlighter-rouge">tinyprog -b</code>.</li>
+  <li>If the board is connected to a dumb power supply, the bootloader will timeout after one second and load the existing user image from the onboard SPI flash.</li>
+</ul>
+
+<p>Pressing the reset button will always return the board to the bootloader, but it will only stay in the bootloader if its plugged into a USB host.</p>
+
+<h3 id="updating-the-bootloader">Updating the Bootloader</h3>
+
+<p>The following incantation will update <code class="language-plaintext highlighter-rouge">tinyprog</code> if there is a new version available, and check for updates for the bootloaders on all connected TinyFPGA BX boards.  <code class="language-plaintext highlighter-rouge">tinyprog</code> will give you the option to automatically update the bootloader if an update is available for your board(s).  It will list any release notes as well.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">--upgrade</span> <span class="nt">--no-cache-dir</span> tinyprog
+tinyprog <span class="nt">--update-bootloader</span>
+</code></pre></div></div>
+
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+  <li><a href="https://github.com/tinyfpga/TinyFPGA-BX">TinyFPGA BX Repository</a></li>
+  <li><a href="https://hackaday.io/project/26848-tinyfpga-b-series">TinyFPGA B-Series Project on Hackaday.io</a></li>
+  <li>Generic FPGA and Verilog Tutorials
+    <ul>
+      <li><a href="http://www.fpga4fun.com/">http://www.fpga4fun.com/</a></li>
+      <li><a href="http://www.asic-world.com/digital/tutorial.html">Digital Logic Tutorial</a></li>
+      <li><a href="http://www.asic-world.com/verilog/veritut.html">Verilog Tutorial</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.latticesemi.com/Products/FPGAandCPLD/iCE40.aspx">Lattice iCE40 Page</a>
+    <ul>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=49312">iCE40 LP/HX Family Data Sheet</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=47778">iCE40 sysCLOCK PLL Design and Usage Guide</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=47775">Memory Usage Guide for iCE40 Devices</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">TinyFPGA</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TinyFPGA</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/tinyfpga"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">tinyfpga</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

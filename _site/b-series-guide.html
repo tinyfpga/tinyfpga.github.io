@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TinyFPGA B-Series User Guide | TinyFPGA</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="TinyFPGA B-Series User Guide" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/b-series-guide.html" />
+<meta property="og:url" content="http://localhost:4000/b-series-guide.html" />
+<meta property="og:site_name" content="TinyFPGA" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TinyFPGA B-Series User Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"TinyFPGA B-Series User Guide","url":"http://localhost:4000/b-series-guide.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TinyFPGA" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">TinyFPGA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/a-series-guide.html">TinyFPGA A-Series User Guide</a><a class="page-link" href="/b-series-guide.html">TinyFPGA B-Series User Guide</a><a class="page-link" href="/bx/guide.html">TinyFPGA BX User Guide</a><a class="page-link" href="/">TinyFPGA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TinyFPGA B-Series User Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="getting-started">Getting Started</h2>
+
+<p>The TinyFPGA B-Series boards use Lattice Semiconductor’s iCE40 FPGAs.  There are a number of existing software and hardware tools available as well as documentation from Lattice for these FPGAs.  This guide will help get you started with the B-Series boards and the tools and information specific to them as well as the tools and documentation available for the FPGA chips themselves.</p>
+
+<h3 id="hardware">Hardware</h3>
+
+<p>Of course you will need to purchase one or more B-Series boards, but you will also need a few other things to get working.</p>
+
+<ol>
+  <li>TinyFPGA <a href="http://store.tinyfpga.com/products/tinyfpga-B2">B2</a> Board.</li>
+  <li>Pins if you want to solder the board to another PCB, insert it into a socket, or use with a solderless breadboard.</li>
+  <li><a href="https://www.google.com/search?q=godzilla+robot&amp;safe=active&amp;tbm=isch">Something</a> <a href="https://www.google.com/search?q=quad+copter&amp;safe=active&amp;tbm=isch">interesting</a> <a href="https://www.google.com/search?q=3d+printer+open+source&amp;safe=active&amp;tbm=isch">to</a> <a href="https://www.google.com/search?q=vga+graphics&amp;safe=active&amp;tbm=isch">control</a> <a href="https://www.google.com/search?q=retro+console&amp;safe=active&amp;tbm=isch">or</a> <a href="https://www.google.com/search?q=retro+computer&amp;safe=active&amp;tbm=isch">interface</a> <a href="https://www.google.com/search?q=tcp+ip&amp;safe=active&amp;tbm=isch">with</a>.  If you are just starting out you could use some LEDs or maybe a logic analyzer.  Otherwise you might have something more specific in mind ;)</li>
+</ol>
+
+<h3 id="software">Software</h3>
+
+<p>You will need to install the latest development environment and other support tools for the iCE40 FPGAs and the B-Series boards.</p>
+
+<ol>
+  <li>Download and install <a href="http://www.latticesemi.com/iCEcube2">Lattice iCEcube2</a>.  It is available for both Windows and Linux.</li>
+  <li><a href="http://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/DiamondFree.aspx">Request a free license file</a> in order to use the <a href="http://www.latticesemi.com/iCEcube2">Lattice iCEcube2</a> software.  Lattice has <a href="http://www.latticesemi.com/en/Support/AnswerDatabase/3/9/2/3925.aspx">detailed instructions on requesting a free license</a> if you need some help.</li>
+  <li>Download and install the latest <a href="https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases">TinyFPGA Programmer</a> release.  This application is written in Python but has a Windows installer.  If you have Python already installed on Windows, make sure you unselect <code class="language-plaintext highlighter-rouge">Install Python</code> on the installer.  For Linux, MacOS, and other posix operating systems, make sure you have Python 2.7 and run the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/programmer"><code class="language-plaintext highlighter-rouge">tinyfpgab.py</code></a> Python script.</li>
+  <li>The TinyFPGA B-Series GitHub Repository has Lattice iCEcube2 template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the iCE40 FPGA chip.  You could <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip">download the latest files directly in a zip file</a> or <a href="https://github.com/tinyfpga/TinyFPGA-B-Series.git">clone the repo using git</a>.</li>
+</ol>
+
+<h3 id="serial-port-driver">Serial Port Driver</h3>
+
+<p><strong>IMPORTANT:</strong> If you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA B-Series boards.  Paul Stoffregen, the creator of the <a href="https://www.pjrc.com/teensy/">Teensy</a> series of microcontroller boards has an installer that works very well for this.</p>
+
+<p>Download and run the <a href="https://www.pjrc.com/teensy/serial_install.exe">Virtual Serial Driver Installer</a>.</p>
+
+<h3 id="first-project-tutorial">First Project Tutorial</h3>
+
+<p>Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won’t go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, generating a bitstream for your TinyFPGA B1 or B2 board, and programming your board with the bitstream.</p>
+
+<h4 id="1-solder-pins-to-your-board">1. Solder Pins to your board</h4>
+
+<p>This tutorial will use the TinyFPGA board in a breadboard.  If you want to follow along you will need to solder pins to the board for it to drive the LEDs.</p>
+
+<p><img src="images/tinyfpga-b-no-pins.jpg" alt="TinyFPGA B2 next to pins" /></p>
+
+<p><img src="images/tinyfpga-b-with-pins.jpg" alt="TinyFPGA A1 with pins" /></p>
+
+<h4 id="2-build-led-blinker-circuit">2. Build LED blinker circuit</h4>
+
+<p>Now that your board has pins on it it can be inserted into a solderless breadboard.  In my breadboard I am using the built-in micro USB port to provide power.  I connected LEDs to pins 11, 12, and 13 with 220 ohm resistors in series.</p>
+
+<p><img src="images/tinyfpga-b-tutorial-circuit.jpg" alt="TinyFPGA blinker circuit" /></p>
+
+<h4 id="3-connect-usb-cable">3. Connect USB cable</h4>
+
+<p>Connect a micro USB cable to the TinyFPGA board.  Use a quality cable to minimize programming issues.</p>
+
+<p><strong>REMINDER:</strong> If you use a version of Windows older than Windows 10, download and run the <a href="https://www.pjrc.com/teensy/serial_install.exe">Virtual Serial Driver Installer</a>.</p>
+
+<h4 id="4-copy-the-template-project-from-the-tinyfpga-b-series-repository">4. Copy the template project from the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/archive/master.zip">TinyFPGA B-Series Repository</a></h4>
+
+<p>Copy the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/tree/master/icecube2_template"><code class="language-plaintext highlighter-rouge">icecube2_template</code></a> directory to a new directory and rename it <code class="language-plaintext highlighter-rouge">blink_project_b</code>.</p>
+
+<h4 id="5-open-your-newly-copied-template-project">5. Open your newly copied template project</h4>
+
+<p>Open the Lattice iCEcube2 application.  From the <code class="language-plaintext highlighter-rouge">File</code> menu select <code class="language-plaintext highlighter-rouge">Open</code> and <code class="language-plaintext highlighter-rouge">Project...</code>.  In the newly opened file chooser, navigate to the <code class="language-plaintext highlighter-rouge">blink_project_b</code> directory you just created and select the <code class="language-plaintext highlighter-rouge">template_sbt.project</code> project file.</p>
+
+<p><img src="images/lattice-icecube2-select-project.png" alt="" /></p>
+
+<h4 id="6-implement-your-logic">6. Implement your logic</h4>
+
+<p>Now that we have opened our new project we can write some verilog code.  On the left side of the iCEcube2 user interface is a tree of files and processes representing the project.  Under <code class="language-plaintext highlighter-rouge">Synthesis Tool/Add Synthesis Files/Design Files</code>, select the <code class="language-plaintext highlighter-rouge">TinyFPGA_B.v</code> verilog file.</p>
+
+<p><img src="images/lattice-icecube2-top-level.png" alt="" /></p>
+
+<p>This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA B-Series boards.  Right now this top-level is assigning all the pins to <code class="language-plaintext highlighter-rouge">1'bz</code>.  This means the pins will be left floating or disconnected.  Let’s implement some logic to blink a few LEDs.</p>
+
+<p>Before we can do anything, we need a clock source.  The TinyFPGA B-Series boards have an on-board 16MHz clock we can use.  This clock is available on pin 3.  We can also use the internal PLL to generate a new clock frequency.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">wire</span> <span class="n">clk_10mhz</span><span class="p">;</span>
+
+  <span class="n">SB_PLL40_CORE</span> <span class="n">usb_pll_inst</span> <span class="p">(</span>
+    <span class="p">.</span><span class="n">REFERENCECLK</span><span class="p">(</span><span class="n">pin3_clk_16mhz</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">PLLOUTCORE</span><span class="p">(</span><span class="n">clk_10mhz</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">RESETB</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">BYPASS</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="p">);</span>
+
+  <span class="c1">// Fin=16, Fout=10;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">DIVR</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">DIVF</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> 
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">DIVQ</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">FILTER_RANGE</span> <span class="o">=</span> <span class="mb">3'b001</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">FEEDBACK_PATH</span> <span class="o">=</span> <span class="s">"SIMPLE"</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">DELAY_ADJUSTMENT_MODE_FEEDBACK</span> <span class="o">=</span> <span class="s">"FIXED"</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">FDA_FEEDBACK</span> <span class="o">=</span> <span class="mb">4'b0000</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">DELAY_ADJUSTMENT_MODE_RELATIVE</span> <span class="o">=</span> <span class="s">"FIXED"</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">FDA_RELATIVE</span> <span class="o">=</span> <span class="mb">4'b0000</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">SHIFTREG_DIV_MODE</span> <span class="o">=</span> <span class="mb">2'b00</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">PLLOUT_SELECT</span> <span class="o">=</span> <span class="s">"GENCLK"</span><span class="p">;</span>
+  <span class="k">defparam</span> <span class="n">usb_pll_inst</span><span class="p">.</span><span class="n">ENABLE_ICEGATE</span> <span class="o">=</span> <span class="mb">1'b0</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We don’t need a high frequency to blink some LEDs, but there are limits to how slow the PLL can operate.  Further reduction of the clock frequency can be achieved in the digital logic.  PLLs can be complicated to program correctly.  It is highly recommended that you read and understand the <a href="http://www.latticesemi.com/view_document?document_id=47778">iCE40 sysCLOCK PLL Design and Usage Guide</a>.  Until you get around to reading that document, the following formula is most important:</p>
+
+<p><img src="images/ice40-pll-formula.png" alt="" /></p>
+
+<p><em>NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this tutorial.</em></p>
+
+<p>Now that we have a clock we can implement some sequential logic.  We will create a simple counter to time the blinking of our LEDs.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">reg</span> <span class="p">[</span><span class="mi">25</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">led_timer</span><span class="p">;</span>
+  
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clk_10mhz</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">led_timer</span> <span class="o">&lt;=</span> <span class="n">led_timer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<p>The timer will increment by 1 every clock period.  We can use the upper bits to blink our LEDs but we need to assign them to external pins.  Edit the corresponding <code class="language-plaintext highlighter-rouge">assign</code> statements so they match the code below.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">assign</span> <span class="n">pin11</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">25</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">pin12</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">24</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">pin13</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">23</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the <code class="language-plaintext highlighter-rouge">CTRL + S</code> keyboard shortcut.</p>
+
+<p><strong>TIP:</strong> The mapping of TinyFPGA B-series board pin names to the FPGA pin names can be found in the <a href="https://github.com/tinyfpga/TinyFPGA-B-Series/blob/master/icecube2_template/constraints/pins.pcf">constraints/pins.pcf</a> file.</p>
+
+<h4 id="7-generate-a-programming-file">7. Generate a programming file</h4>
+
+<p>Go to the <code class="language-plaintext highlighter-rouge">Tool</code> file menu and select <code class="language-plaintext highlighter-rouge">Run All</code> to synthesize the design and generate a bitstream.  When synthesis is complete you should see a green checkmark next to the <code class="language-plaintext highlighter-rouge">Generate Bitmap</code> process.</p>
+
+<p><img src="images/lattice-icecube2-generate-bitmap.png" alt="" /></p>
+
+<h4 id="8-program-the-fpga-board">8. Program the FPGA board</h4>
+
+<ul>
+  <li>In Windows, open the ‘TinyFPGA Programmer’ application via the start menu.</li>
+  <li>In MacOS and Linux, open the <code class="language-plaintext highlighter-rouge">TinyFPGA Programmer</code> application by running the <code class="language-plaintext highlighter-rouge">tinyfpgab-programmer.py</code> python module from the <a href="https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases/">TinyFPGA Programmer Application GitHub Repo</a>.</li>
+</ul>
+
+<p>The bootloader on the B-Series boards will present itself as a serial port.  The programmer application will display serial port identifiers for each TinyFPGA board it can program.</p>
+
+<p>When you first connect a B-Series board it may not be immediately ready to program.</p>
+
+<p><img src="images/b-series-bootloader-not-active.png" alt="" /></p>
+
+<p>If this happens you can press the reset button on the B-Series board to active the bootloader bitstream.  Once the bootloader is active the programmer application status will update.</p>
+
+<p><img src="images/b-series-bootloader-active.png" alt="" /></p>
+
+<p>Select the bitstream to program.  This will be buried a few directories under the project: <code class="language-plaintext highlighter-rouge">template_Implmnt/sbt/outputs/bitmap/TinyFPGA_B_bitmap.hex</code></p>
+
+<p>If you’re using IceStorm for synthesis the bitstream will be a <code class="language-plaintext highlighter-rouge">.bin</code> file in the same directory as your project:
+<code class="language-plaintext highlighter-rouge">icestorm_template/TinyFPGA_B.bin</code></p>
+
+<p><img src="images/b-series-ready-to-program.png" alt="" /></p>
+
+<p>Press the <code class="language-plaintext highlighter-rouge">Program FPGA</code> button to program the bitstream to the user area of the FPGA board SPI flash.  The programmer application will keep you updated with the status.  If it fails, press the reset button and try again.  If the application becomes unresponsive, close the application, unplug the FPGA board, and start over.  If you have trouble programming your TinyFPGA B-Series board please contact me for help at luke@tinyfpga.com.</p>
+
+<p>The programmer application will verify the bitstream was written correctly and report ‘Success!’ if all is well.  The programmer should also report that the bootloader is not active.  This is because the bootloader does not consume any FPGA resources while the user configuration is running.  The bootloader can be enabled again by pressing the reset button on the TinyFPGA board.</p>
+
+<p><img src="images/b-series-programmed-running.png" alt="" /></p>
+
+<h4 id="9-verify-the-design-works-on-the-board-as-intended">9. Verify the design works on the board as intended</h4>
+
+<p>If you followed this tutorial exactly you should see the three LEDs counting in binary.  One will stay on for about a second, then off for a second.  The next will be on for two seconds and off for two seconds.  The last will be on for four seconds and off for four seconds.</p>
+
+<p>If you see the LEDs blinking congratulations!  You’ve successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).</p>
+
+<p><img src="images/tinyfpga-b-blinky.jpg" alt="" /></p>
+
+<h3 id="extra-resources">Extra Resources</h3>
+<ul>
+  <li><a href="https://github.com/tinyfpga/TinyFPGA-B-Series">TinyFPGA B-Series Repository</a></li>
+  <li><a href="https://hackaday.io/project/26848-tinyfpga-b-series">TinyFPGA B-Series Project on Hackaday.io</a></li>
+  <li>Generic FPGA and Verilog Tutorials
+    <ul>
+      <li><a href="http://www.fpga4fun.com/">http://www.fpga4fun.com/</a></li>
+      <li><a href="http://www.asic-world.com/digital/tutorial.html">Digital Logic Tutorial</a></li>
+      <li><a href="http://www.asic-world.com/verilog/veritut.html">Verilog Tutorial</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.latticesemi.com/Products/FPGAandCPLD/iCE40.aspx">Lattice iCE40 Page</a>
+    <ul>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=49312">iCE40 LP/HX Family Data Sheet</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=47778">iCE40 sysCLOCK PLL Design and Usage Guide</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=47775">Memory Usage Guide for iCE40 Devices</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">TinyFPGA</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TinyFPGA</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/tinyfpga"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">tinyfpga</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

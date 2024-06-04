@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TinyFPGA A-Series User Guide | TinyFPGA</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="TinyFPGA A-Series User Guide" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/a-series-guide.html" />
+<meta property="og:url" content="http://localhost:4000/a-series-guide.html" />
+<meta property="og:site_name" content="TinyFPGA" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TinyFPGA A-Series User Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"TinyFPGA A-Series User Guide","url":"http://localhost:4000/a-series-guide.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TinyFPGA" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">TinyFPGA</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/a-series-guide.html">TinyFPGA A-Series User Guide</a><a class="page-link" href="/b-series-guide.html">TinyFPGA B-Series User Guide</a><a class="page-link" href="/bx/guide.html">TinyFPGA BX User Guide</a><a class="page-link" href="/">TinyFPGA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">TinyFPGA A-Series User Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="getting-started">Getting Started</h2>
+
+<p>The TinyFPGA A-Series boards use Lattice Semiconductor’s MachXO2 FPGAs.  There are a number of existing software and hardware tools available as well as documentation from Lattice for these FPGAs.  This guide will help get you started with the A-Series boards and the tools and information specific to them as well as the tools and documentation available for the FPGA chips themselves.</p>
+
+<h3 id="hardware">Hardware</h3>
+
+<p>Of course you will need to purchase one or more A-Series boards, but you will also need a few other things to get working.</p>
+
+<ol>
+  <li>TinyFPGA <a href="http://store.tinyfpga.com/product/tinyfpga-a1">A1</a> or <a href="http://store.tinyfpga.com/product/tinyfpga-a2">A2</a> Board.</li>
+  <li><a href="http://store.tinyfpga.com/product/a-series-pins">Pins</a> if you want to solder the board to another PCB, insert it into a socket, or use with a solderless breadboard.</li>
+  <li>3.3 volt power supply.  You can use a <a href="http://store.tinyfpga.com/product/a-series-3-3-volt-regulator-ld1117v33">3.3 volt regulator</a>, a lab power supply, or use an existing 3.3 volt power supply from your project.</li>
+  <li><a href="http://store.tinyfpga.com/products/tinyfpga-programmer">TinyFPGA Programmer</a>.  This is a low-cost JTAG programmer board designed specifically for the A-series boards.</li>
+  <li><a href="https://www.google.com/search?q=godzilla+robot&amp;safe=active&amp;tbm=isch">Something</a> <a href="https://www.google.com/search?q=quad+copter&amp;safe=active&amp;tbm=isch">interesting</a> <a href="https://www.google.com/search?q=3d+printer+open+source&amp;safe=active&amp;tbm=isch">to</a> <a href="https://www.google.com/search?q=vga+graphics&amp;safe=active&amp;tbm=isch">control</a> <a href="https://www.google.com/search?q=retro+console&amp;safe=active&amp;tbm=isch">or</a> <a href="https://www.google.com/search?q=retro+computer&amp;safe=active&amp;tbm=isch">interface</a> <a href="https://www.google.com/search?q=tcp+ip&amp;safe=active&amp;tbm=isch">with</a>.  If you are just starting out you could use some LEDs or maybe a logic analyzer.  Otherwise you might have something more specific in mind ;)</li>
+</ol>
+
+<h3 id="software">Software</h3>
+
+<p>You will need to install the latest development environment and other support tools for the MachXO2 FPGAs and the A-Series boards.</p>
+
+<ol>
+  <li>Download and install <a href="http://www.latticesemi.com/latticediamond">Lattice Diamond</a>.  It is available for both <a href="http://www.latticesemi.com/latticediamond#windows">Windows</a> and <a href="http://www.latticesemi.com/latticediamond#linux">Linux</a>.</li>
+  <li><a href="http://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/DiamondFree.aspx">Request a free license file</a> in order to use the <a href="http://www.latticesemi.com/latticediamond">Lattice Diamond</a> software.</li>
+  <li>The TinyFPGA A-Series GitHub Repository has Lattice Diamond template projects that you may find useful.  They include an empty top-level verilog module with pin constraints to map board pins to the correct IOs on the MachXO2 FPGA chip.  You could <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip">download the latest files directly in a zip file</a> or <a href="https://github.com/tinyfpga/TinyFPGA-A-Series.git">clone the repo using git</a>.</li>
+  <li>Download and install the latest release of the <a href="https://github.com/tinyfpga/TinyFPGA-Programmer-Application/releases">TinyFPGA Programmer Application</a>.  This programmer application is used for both the A-series and B-series boards.</li>
+</ol>
+
+<h3 id="serial-port-driver">Serial Port Driver</h3>
+
+<p><strong>IMPORTANT:</strong> If you plan on using the TinyFPGA Programmer and you are using a Windows version older than Windows 10, you need to install a universial USB serial port INF that tells Windows to use the USB serial port driver for the TinyFPGA Programmer.  Paul Stoffregen, the creator of the <a href="https://www.pjrc.com/teensy/">Teensy</a> series of microcontroller boards has an installer that works very well for this.</p>
+
+<p>Download and run the <a href="https://www.pjrc.com/teensy/serial_install.exe">Virtual Serial Driver Installer</a>.</p>
+
+<h3 id="first-project-tutorial">First Project Tutorial</h3>
+
+<p>Once you have all of your hardware and software ready you can get started developing some digital logic.  This first project won’t go into all the details of designing and implementing digital logic circuits in general, but it will guide you through the specifics of setting up a simple project, writing verilog, generating a bitstream for your TinyFPGA A1 or A2 board, and programming your board with the bitstream.</p>
+
+<h4 id="1-solder-pins-to-your-board">1. Solder Pins to your board</h4>
+
+<p>This tutorial will use the TinyFPGA board in a breadboard.  If you want to follow along you will need to solder pins to the board for it to drive the LEDs and to provide a connection for the JTAG programmer.</p>
+
+<p><img src="images/tinyfpga-a-no-pins.jpg" alt="TinyFPGA A1 next to pins" /></p>
+
+<p>The JTAG pins are on the board twice.  There is a header at the bottom of the board where the pins can be soldered on facing up.  This is most convenient if you want to connect your JTAG programmer directly to the board.  The JTAG pins are also on the right side of the board.  This is useful if you are taking advantage of the <code class="language-plaintext highlighter-rouge">JTAGENB</code> feature and want to use the JTAG pins for IO.  They are also useful if you want to add the TinyFPGA board to an existing JTAG chain in your project.</p>
+
+<p><img src="images/tinyfpga-a-with-pins.jpg" alt="TinyFPGA A1 with pins" /></p>
+
+<h4 id="2-build-led-blinker-circuit">2. Build LED blinker circuit</h4>
+
+<p>Now that your board has pins on it it can be inserted into a solderless breadboard.  In my breadboard I am using a <a href="http://store.tinyfpga.com/product/a-series-3-3-volt-regulator-ld1117v33">3.3 volt regulator</a> to convert a 5 volt power source.  I connected LEDs to pins 9, 10, and 11 with 220 ohm resistors in series.</p>
+
+<p><img src="images/tinyfpga-a-tutorial-circuit.jpg" alt="TinyFPGA blinker circuit" /></p>
+
+<h4 id="3-connect-jtag-programmer">3. Connect JTAG programmer</h4>
+
+<h5 id="option-1-use-the-tinyfpga-programmer">Option 1: Use the TinyFPGA Programmer</h5>
+
+<p>Connect the TinyFPGA Programmer to the TinyFPGA board.  Make sure the programmer is connected in the correct orientation.  You should be able to see the labels of the JTAG header pins on both the programmer and the TinyFPGA board.  If you need a 3.3 volt power source, there is a location on the TinyFPGA Programmer board where you can solder a header or wire to power your project.</p>
+
+<p><img src="images/tinyfpga-a-prog-front-tutorial.jpg" alt="TinyFPGA blinker circuit with JTAG programmer" /></p>
+
+<h5 id="option-2-use-a-lattice-programming-cable">Option 2: Use a Lattice Programming Cable</h5>
+
+<p>I had originally bought the <a href="http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkeyHW-USBN-2B">official Lattice Programming Cable</a>.  I think the <a href="(https://www.ebay.com/sch/i.html?_nkw=lattice+fpga+jtag)">generic lattice programming cables on eBay</a> will work as well.  They use the same FTDI chip.  The colors in my setup might not match the colors on your cable.  Pay attention to the JTAG names on the FPGA board and connect them to the correct wires on your programming cable.</p>
+
+<p>In my circuit I’m using the <code class="language-plaintext highlighter-rouge">5V Out</code> from the programming cable to drive the 3.3 volt regulator.  Make sure you connect the <code class="language-plaintext highlighter-rouge">VCC</code> wire from the programmer to 3.3 volts on your board.  That’s the voltage level the programmer will use when communicating with the FPGA.</p>
+
+<p><img src="images/tinyfpga-a-tutorial-programmer.jpg" alt="TinyFPGA blinker circuit with JTAG programmer" /></p>
+
+<h4 id="4-copy-the-template-project-from-the-tinyfpga-a-series-repository">4. Copy the template project from the <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/archive/master.zip">TinyFPGA A-Series Repository</a></h4>
+
+<p>Copy either the <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a1"><code class="language-plaintext highlighter-rouge">template_a1</code></a> or <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/tree/master/template_a2"><code class="language-plaintext highlighter-rouge">template_a2</code></a> directories to a new directory and rename it <code class="language-plaintext highlighter-rouge">blink_project</code>.</p>
+
+<h4 id="5-open-your-newly-copied-template-project">5. Open your newly copied template project</h4>
+
+<p>Open the Lattice Diamond application.  From the <code class="language-plaintext highlighter-rouge">File</code> menu select <code class="language-plaintext highlighter-rouge">Open</code> and <code class="language-plaintext highlighter-rouge">Project...</code>.  In the newly opened file chooser, navigate to the <code class="language-plaintext highlighter-rouge">blink_project</code> directory you just created and select the <code class="language-plaintext highlighter-rouge">template_a1.ldf</code> or <code class="language-plaintext highlighter-rouge">template_a2.ldf</code> project file.</p>
+
+<p><img src="images/lattice-diamond-select-project.png" alt="" /></p>
+
+<h4 id="6-implement-your-logic">6. Implement your logic</h4>
+
+<p>Now that we have opened our new project we can write some verilog code.  Make sure the <code class="language-plaintext highlighter-rouge">File List</code> tab is open on the left-hand side view and open up the <code class="language-plaintext highlighter-rouge">TinyFPGA_A1.v</code> or <code class="language-plaintext highlighter-rouge">TinyFPGA_A2.v</code> verilog file.</p>
+
+<p><img src="images/lattice-diamond-a2-top-level.png" alt="" /></p>
+
+<p>This is a very simple top-level verilog module that represents the IO pins available on the TinyFPGA A-Series boards.  Right now this top-level is assigning all the pins to <code class="language-plaintext highlighter-rouge">1'bz</code>.  This means the pins will be left floating or disconnected.  Let’s implement some logic to blink a few LEDs.</p>
+
+<p>Before we can do anything, we need a clock source.  The MachXO2 FPGAs have an internal oscillator we can use.  To use the internal oscillator we need to instantiate the <code class="language-plaintext highlighter-rouge">OSCH</code> module and tell it what frequency we want.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">wire</span> <span class="n">clk</span><span class="p">;</span>
+  
+  <span class="n">OSCH</span> <span class="p">#(</span>
+    <span class="p">.</span><span class="n">NOM_FREQ</span><span class="p">(</span><span class="s">"2.08"</span><span class="p">)</span>
+  <span class="p">)</span> <span class="n">internal_oscillator_inst</span> <span class="p">(</span>
+    <span class="p">.</span><span class="n">STDBY</span><span class="p">(</span><span class="mb">1'b0</span><span class="p">),</span> 
+    <span class="p">.</span><span class="n">OSC</span><span class="p">(</span><span class="n">clk</span><span class="p">)</span>
+  <span class="p">);</span> 
+</code></pre></div></div>
+
+<p>Since we are just blinking some LEDs we don’t need a high frequency so we can use the lowest internal frequency available which is 2.08 MHz.  For more details on the clock resources available in the MachXO2 FPGAs please see the <a href="http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/MO/MachXO2sysCLOCKPLLDesignandUsageGuide.pdf?document_id=39080">MachXO2 sysCLOCK PLL Design and Usage Guide</a>.</p>
+
+<p><em>NOTE: If you are familiar with VHDL or Verilog you may decide to quickly skim through the rest of this step or skip it completely.  If you are not at all familiar with Verilog you should pay close attention and take a look at the additional resources at the end of this tutorial.</em></p>
+
+<p>Now that we have a clock we can implement some sequential logic.  We will create a simple counter to time the blinking of our LEDs.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">reg</span> <span class="p">[</span><span class="mi">23</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">led_timer</span><span class="p">;</span>
+  
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clk</span><span class="p">)</span> <span class="k">begin</span>
+    <span class="n">led_timer</span> <span class="o">&lt;=</span> <span class="n">led_timer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<p>The timer will increment by 1 every clock period.  We can use the upper bits to blink our LEDs but we need to assign them to external pins.  Edit the corresponding <code class="language-plaintext highlighter-rouge">assign</code> statements so they match the code below.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">assign</span> <span class="n">pin9_jtgnb</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">23</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">pin10_sda</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">22</span><span class="p">];</span>
+  <span class="k">assign</span> <span class="n">pin11_scl</span> <span class="o">=</span> <span class="n">led_timer</span><span class="p">[</span><span class="mi">21</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>At this point you should save all your changes by clicking the floppy disk icon below the menubar or by using the <code class="language-plaintext highlighter-rouge">CTRL + SHIFT + S</code> keyboard shortcut.</p>
+
+<p><strong>TIP:</strong> The mapping of TinyFPGA A-series board pin names to the FPGA pin names can be found in the <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/blob/master/template_a1/template_a1.lpf">template_a1.lpf</a> or <a href="https://github.com/tinyfpga/TinyFPGA-A-Series/blob/master/template_a1/template_a2.lpf">template_a2.lpf</a> file.</p>
+
+<h4 id="7-generate-jedec-programming-file">7. Generate JEDEC programming file</h4>
+
+<p>Select the <code class="language-plaintext highlighter-rouge">Process</code> tab on the left hand side view.  This will bring up a tree of tasks that need to be executed in order to generate the JEDEC programming file.  At the very bottom of the tree you should see an entry labeled <code class="language-plaintext highlighter-rouge">JEDEC File</code>.  Double-click that entry and the programming file should be created.  When it is done it will have a green checkmark next to it.</p>
+
+<p><img src="images/lattice-diamond-a2-project-view.png" alt="" /></p>
+
+<h4 id="8-program-the-fpga-board">8. Program the FPGA board</h4>
+
+<h5 id="option-1-use-the-tinyfpga-programmer-1">Option 1: Use the TinyFPGA Programmer</h5>
+
+<p>Open up the TinyFPGA Programmer Application.</p>
+
+<p><img src="images/tinyfpga-a-prog-fpga-detected.png" alt="" /></p>
+
+<p>Navigate to your project’s <code class="language-plaintext highlighter-rouge">impl</code> directory and select the <code class="language-plaintext highlighter-rouge">.jed</code> bitstream file.</p>
+
+<p><img src="images/tinyfpga-a-prog-fpga-ready.png" alt="" /></p>
+
+<p>If your TinyFPGA Programmer is connected correctly, it should indicate it is <code class="language-plaintext highlighter-rouge">Connected to TinyFPGA A1.  Ready to program.</code>.  Press the <code class="language-plaintext highlighter-rouge">Program FPGA</code> button to program the design onto the FPGA.</p>
+
+<p><img src="images/tinyfpga-a-prog-fpga-done.png" alt="" /></p>
+
+<h5 id="option-2-use-a-lattice-programming-cable-1">Option 2: Use a Lattice Programming Cable</h5>
+
+<p>From the <code class="language-plaintext highlighter-rouge">Tools</code> menu select <code class="language-plaintext highlighter-rouge">Programmer</code>.</p>
+
+<p>In the <code class="language-plaintext highlighter-rouge">Programmer: Getting Started</code> dialog make sure the <code class="language-plaintext highlighter-rouge">Create a new project from a JTAG scan</code> option is selected as well as the <code class="language-plaintext highlighter-rouge">Import file to current implementation</code> checkbox.</p>
+
+<p><img src="images/lattice-programmer-getting-started.png" alt="" /></p>
+
+<p>Click on the program button to program the design onto the FPGA.</p>
+
+<p><img src="images/lattice-diamond-program-button.png" alt="" /></p>
+
+<h4 id="9-verify-the-design-works-on-the-board-as-intended">9. Verify the design works on the board as intended</h4>
+
+<p>If you followed this tutorial exactly you should see the three LEDs counting in binary.  One will stay on for about a second, then off for a second.  The next will be on for two seconds and off for two seconds.  The last will be on for four seconds and off for four seconds.</p>
+
+<p>If you see the LEDs blinking congratulations!  You’ve successfully programmed your FPGA board.  If you are familiar with Verilog and digital design you are ready to implement more complicated designs on your board(s).</p>
+
+<p><img src="images/tinyfpga-a-blinky.jpg" alt="" /></p>
+
+<h3 id="extra-resources">Extra Resources</h3>
+<ul>
+  <li><a href="https://github.com/tinyfpga/TinyFPGA-A-Series">TinyFPGA A-Series Repository</a></li>
+  <li>Generic FPGA and Verilog Tutorials
+    <ul>
+      <li><a href="http://www.fpga4fun.com/">http://www.fpga4fun.com/</a></li>
+      <li><a href="http://www.asic-world.com/digital/tutorial.html">Digital Logic Tutorial</a></li>
+      <li><a href="http://www.asic-world.com/verilog/veritut.html">Verilog Tutorial</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.latticesemi.com/Products/FPGAandCPLD/MachXO2.aspx#_3D24D0EEB97F430890D7AF24D20DF79A">Lattice MachXO2 Page</a>
+    <ul>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=38834">MachXO2 Family Data Sheet</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=39083">MachXO2 sysIO Usage Guide</a></li>
+      <li><a href="http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/MO/MachXO2sysCLOCKPLLDesignandUsageGuide.pdf?document_id=39080">MachXO2 sysCLOCK PLL Design and Usage Guide</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=39082">Memory Usage Guide for MachXO2 Devices</a></li>
+      <li><a href="http://www.latticesemi.com/view_document?document_id=39084">Implementing High-Speed Interfaces with MachXO2 Devices</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">TinyFPGA</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">TinyFPGA</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/tinyfpga"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">tinyfpga</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

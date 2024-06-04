@@ -1,0 +1,6 @@
+{
+  "version": "1.0.1",
+  "notes": "Updates USB VID:PID to fix issues with APIO not recognizing the board.",
+  "stage_one_url": "https://github.com/tinyfpga/TinyFPGA-Bootloader/releases/download/1.0.1/bootloader.bin",
+  "stage_two_url": "https://github.com/tinyfpga/TinyFPGA-Bootloader/releases/download/1.0.1/tinyfpga_bx_fw.bin"
+}

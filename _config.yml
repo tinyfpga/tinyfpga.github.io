@@ -1,9 +1,7 @@
-theme: jekyll-theme-slate
+title: TinyFPGA
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.tinyfpga.com" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  tinyfpga
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      site:
-        title: "TinyFPGA.com"
+# Build settings
+theme: minima
